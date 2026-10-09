@@ -1,0 +1,973 @@
+<!doctype html>
+<html lang="sr-Latn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Njuškica – salon za šišanje i negu pasa u Čačku. Šišanje, kupanje, nokti, uši i tretman protiv linjanja. Zakažite termin online.">
+<meta name="theme-color" content="#d8ab9e">
+<meta property="og:title" content="Njuškica – salon za pse, Čačak">
+<meta property="og:description" content="Nega kakvu vaš ljubimac zaslužuje. Zakažite termin online.">
+<meta property="og:image" content="pas-portret.png">
+<link rel="icon" href="pas-portret.png">
+<style>[hidden]{display:none!important}html,body{margin:0}img{max-width:100%}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+<title>Njuškica Čačak</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600;700&family=Fredoka:wght@500;600;700&family=Quicksand:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: playful-luxe one-pager — full-bleed rose-gold hero with a giant word behind the mascot, then white editorial blocks of huge condensed type, a "SPA" blob and thought clouds. */
+:root{
+  --rose-1:#ecd6ce; --rose-2:#d8ab9e; --rose-3:#c58c7c; --rose-ink:#c08473;
+  --rose-pale:#f8e0d8;
+  --sky-1:#e4edf1; --sky-2:#b9cfd9; --sky-3:#9fbccb;
+  --cloud-blue:#93c1d4; --cloud-sage:#b3d0a3;
+  --ink:#474341; --text:#3d3a38; --mute:#8a8481;
+  --paper:#ffffff; --mist:#f4f4f4;
+  --f-display:"Anton","Impact","Arial Narrow Bold",sans-serif;
+  --f-round:"Fredoka","Quicksand",system-ui,sans-serif;
+  --f-body:"Quicksand",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --gutter:clamp(16px,4vw,64px);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--text);font-family:var(--f-body);font-weight:500;font-size:17px;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer;background:none;border:0;padding:0}
+h1,h2,h3{margin:0;font-weight:400}
+.display{font-family:var(--f-display);text-transform:uppercase;line-height:.98;letter-spacing:.005em;color:var(--ink);text-wrap:balance}
+:focus-visible{outline:2px solid var(--rose-ink);outline-offset:4px;border-radius:8px}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.menu-btn,.pill-out,.hero-title{text-shadow:0 1px 14px rgba(120,60,45,.22)}
+.wrap{padding-inline:var(--gutter);max-width:1440px;margin-inline:auto}
+
+/* ---------- sketch-ellipse button (hand-drawn ring) ---------- */
+.sketch{position:relative;display:inline-grid;grid-auto-flow:column;align-items:center;padding:22px 58px;font-family:var(--f-body);font-weight:600;font-size:16px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink);text-decoration:none;isolation:isolate}
+.sketch svg{position:absolute;inset:-6px -14px;width:calc(100% + 28px);height:calc(100% + 12px);z-index:-1;overflow:visible;pointer-events:none}
+.sketch svg path{fill:none;stroke:var(--rose-ink);stroke-width:1.3;stroke-linecap:round;stroke-dasharray:640;stroke-dashoffset:0}
+.sketch:hover svg path{animation:redraw .9s cubic-bezier(.6,.1,.2,1)}
+@keyframes redraw{from{stroke-dashoffset:640}to{stroke-dashoffset:0}}
+.sketch .arr{display:inline-block;margin-left:10px;transition:transform .3s}
+.sketch:hover .arr{transform:translateX(5px)}
+.sketch.light{color:#fff}
+.sketch.light svg path{stroke:#fff}
+.sketch.grey svg path{stroke:#c9ccd6}
+
+/* ---------- NAV ---------- */
+.nav{position:absolute;inset:0 0 auto 0;z-index:30;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:calc(18px + env(safe-area-inset-top,0px)) var(--gutter) 0}
+.logo{justify-self:start;font-family:var(--f-display);font-size:clamp(28px,3vw,44px);letter-spacing:.06em;color:#fff;text-decoration:none;text-shadow:0 1px 14px rgba(120,60,45,.22)}
+.logo img{display:block;height:clamp(64px,8vw,120px);width:auto}
+.menu-btn{display:flex;align-items:center;gap:14px;color:#fff;font-size:16px;font-weight:600;letter-spacing:.06em}
+.menu-btn i{display:block;width:44px;height:1.5px;background:currentColor;transition:width .3s}
+.menu-btn:hover i{width:64px}
+.pill-out{justify-self:end;display:inline-flex;align-items:center;gap:16px;padding:16px 40px;border:1.5px solid rgba(255,255,255,.9);border-radius:999px;color:#fff;font-weight:600;font-size:16px;letter-spacing:.08em;text-transform:uppercase;transition:background .3s,color .3s}
+.pill-out:hover{background:#fff;color:var(--rose-3)}
+@media (max-width:700px){.menu-btn i{width:20px}.pill-out{padding:11px 18px;font-size:13px;gap:8px}.menu-btn{font-size:13px;gap:8px}}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;min-height:clamp(600px,94vh,960px);overflow:hidden;background:linear-gradient(118deg,var(--h1) 0%,var(--h2) 55%,var(--h3) 100%);--h1:var(--rose-1);--h2:var(--rose-2);--h3:var(--rose-3);--word:var(--rose-pale);--heart:rgba(196,140,124,.45)}
+.hero[data-slide="1"]{--h1:#e7eff3;--h2:#bcd1db;--h3:#93b3c3;--word:#eef5f8;--heart:rgba(120,160,180,.35)}
+.hero[data-slide="2"]{--h1:#eeeae6;--h2:#cfc6bf;--h3:#ad9f95;--word:#f6f1ec;--heart:rgba(150,135,125,.35)}
+.hero-heart{position:absolute;left:50%;top:9%;width:min(820px,82vw);transform:translateX(-50%);color:var(--heart)}
+.hero-heart path{fill:currentColor}
+.hero-title{position:absolute;left:0;right:0;top:clamp(110px,8.5vw,110px);text-align:center;font-family:var(--f-display);text-transform:uppercase;line-height:.92;font-size:clamp(44px,7vw,104px);color:rgba(255,246,242,.92);z-index:3;pointer-events:none;letter-spacing:.005em}
+.hero-title span{display:block}
+.hero-word{position:absolute;left:50%;top:clamp(250px,33vw,360px);transform:translateX(-50%);z-index:2;font-family:var(--f-round);font-weight:600;font-size:clamp(60px,19vw,300px);line-height:.8;letter-spacing:-.03em;color:var(--word);white-space:nowrap;pointer-events:none}
+.hero-word .ch{display:inline-block;animation:pop-ch .9s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes pop-ch{from{transform:translateY(30%) scale(.8);opacity:0}}
+.hero-dog{position:absolute;left:50%;bottom:3%;z-index:4;height:min(60%,620px);transform:translateX(-50%);filter:drop-shadow(0 30px 40px rgba(80,40,30,.28));transform-origin:50% 95%;cursor:pointer}
+.hero-dog img{height:100%;width:auto;max-width:none;display:block;user-select:none;-webkit-user-drag:none}
+.hero-dog.wiggle{animation:wiggle .9s cubic-bezier(.3,1.6,.5,1)}
+@keyframes wiggle{0%{transform:translateX(-50%) rotate(0)}20%{transform:translateX(-50%) rotate(-4deg) scale(1.02)}45%{transform:translateX(-50%) rotate(3deg)}70%{transform:translateX(-50%) rotate(-1.5deg)}100%{transform:translateX(-50%) rotate(0)}}
+.pet-me{position:absolute;left:50%;bottom:25%;transform:translateX(-50%);z-index:6;width:200px;height:120px;display:grid;place-items:center;color:#fff;font-weight:600;font-size:21px;letter-spacing:.03em}
+.pet-me svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.pet-me svg path{fill:none;stroke:#fff;stroke-width:1.4;stroke-linecap:round;stroke-dasharray:640;animation:redraw 1.6s .6s cubic-bezier(.6,.1,.2,1) both}
+.pet-me:hover svg path{animation:redraw .9s cubic-bezier(.6,.1,.2,1)}
+.wave{position:absolute;left:0;right:0;bottom:-1px;z-index:3;width:100%;height:clamp(60px,9vw,130px);display:block}
+.wave path{fill:var(--paper)}
+.hero-arrow{position:absolute;z-index:7;top:62%;width:clamp(90px,12vw,190px);color:#fff;transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.hero-arrow svg{width:100%;overflow:visible}
+.hero-arrow path{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.hero-arrow.prev{left:var(--gutter)}
+.hero-arrow.next{right:var(--gutter)}
+.hero-arrow.prev:hover{transform:translateX(-10px)}
+.hero-arrow.next:hover{transform:translateX(10px)}
+.peek{position:absolute;right:-90px;top:44%;z-index:2;height:260px;pointer-events:none;filter:drop-shadow(0 16px 20px rgba(80,40,30,.2))}
+.peek img{-webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent);mask-image:linear-gradient(to bottom,#000 78%,transparent);height:100%;width:auto;max-width:none;transform:scaleX(-1)}
+.bubbles{position:absolute;inset:0;z-index:5;pointer-events:none}
+.hb{position:absolute;border-radius:50%;will-change:transform;
+  background:
+    radial-gradient(circle at 32% 28%,rgba(255,255,255,.95) 0 5%,rgba(255,255,255,0) 14%),
+    radial-gradient(circle at 70% 78%,rgba(255,255,255,.55) 0 4%,rgba(255,255,255,0) 12%),
+    conic-gradient(from 200deg,rgba(255,214,231,.35),rgba(196,230,255,.35),rgba(214,255,226,.3),rgba(255,236,196,.35),rgba(255,214,231,.35));
+  -webkit-mask:radial-gradient(circle,transparent 58%,#000 72%);mask:radial-gradient(circle,transparent 58%,#000 72%);
+  animation:drift var(--d,14s) ease-in-out infinite alternate;animation-delay:var(--dl,0s)}
+.hb::after{content:"";position:absolute;inset:0;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(255,255,255,.55)}
+@keyframes drift{from{transform:translate(0,0)}to{transform:translate(var(--mx,12px),var(--my,-26px))}}
+.note{position:absolute;z-index:6;display:block;color:#fff;font-family:"Caveat",var(--f-round),cursive;font-size:clamp(24px,2.1vw,34px);line-height:1.02;text-align:left;text-shadow:0 1px 12px rgba(120,60,45,.25);will-change:transform}
+.note svg{display:block;width:clamp(110px,10vw,160px);overflow:visible;margin-top:6px}
+.note path{fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:300;animation:redraw 1.4s .9s cubic-bezier(.6,.1,.2,1) both}
+.note b{font-weight:700;border-bottom:2px solid rgba(255,255,255,.7)}
+.n-left{left:13%;top:34%;transform:rotate(-6deg)}
+.n-left svg{margin-left:40%}
+.n-right{right:10%;top:30%;cursor:pointer;transform:rotate(4deg)}
+.n-right:hover b{border-bottom-color:#fff}
+.n-right svg{margin-left:-10%}
+.burst{position:absolute;z-index:8;pointer-events:none;color:#fff;animation:burst 1.2s ease-out forwards}
+@keyframes burst{to{transform:translate(var(--dx),var(--dy)) scale(1.4) rotate(var(--r));opacity:0}}
+@media (max-width:1200px){.peek{display:none}}
+@media (max-width:860px){
+  .note{display:none}
+  .hero{min-height:clamp(600px,100svh,880px)}
+  .hero-title{top:92px;font-size:clamp(38px,10.5vw,66px)}
+  .hero-heart{top:84px;width:min(560px,92vw)}
+  .hero-word{top:calc(96px + 21vw)}
+  .hero-dog{height:min(55%,560px)}
+  .hero-arrow{top:auto;bottom:12%;width:64px}
+  .pet-me{width:140px;height:86px;font-size:16px;bottom:21%}
+}
+
+/* ---------- STATEMENT ---------- */
+.statement{text-align:center;padding-block:clamp(56px,8vw,110px) clamp(70px,9vw,130px)}
+.statement h2{font-size:clamp(40px,7.4vw,112px);max-width:16ch;margin-inline:auto}
+.pic{display:inline-block;vertical-align:-.06em;width:1.9em;height:.92em;border-radius:.1em;overflow:hidden;position:relative;background:linear-gradient(120deg,var(--a,#e7c1b5),var(--b,#c98d7c));margin-inline:.08em;transform:rotate(var(--t,0deg));transition:transform .4s cubic-bezier(.2,1.4,.4,1)}
+.pic:hover{transform:rotate(0) scale(1.06)}
+.pic img{position:absolute;height:var(--zh,260%);width:auto;max-width:none;left:var(--x,20%);top:var(--y,-8%)}
+.statement p{font-size:clamp(18px,1.6vw,22px);margin:30px 0 34px}
+
+/* ---------- STORY ---------- */
+.story{text-align:center;padding-bottom:clamp(60px,8vw,110px)}
+.story h2{font-size:clamp(44px,7.6vw,116px)}
+.story .copy{max-width:62ch;margin:36px auto 0;font-size:clamp(17px,1.4vw,20px)}
+.story .copy p{margin:0 0 26px}
+
+/* ---------- SERVICES / SPA ---------- */
+.spa{position:relative;padding-bottom:clamp(60px,8vw,120px)}
+.spa h2{position:relative;z-index:3;text-align:center;font-size:clamp(56px,9vw,136px);line-height:.9;margin-bottom:calc(clamp(56px,9vw,136px) * -.62)}
+.blob{position:relative;margin-inline:auto;max-width:1380px;min-height:clamp(520px,52vw,720px);background:radial-gradient(90% 120% at 30% 20%,var(--sky-1),var(--sky-2) 70%,var(--sky-3));border-radius:7% 9% 6% 8% / 12% 9% 14% 10%;overflow:hidden}
+.blob .spa-word{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);font-family:var(--f-round);font-weight:700;font-size:clamp(170px,30vw,460px);letter-spacing:-.02em;color:rgba(255,255,255,.55);line-height:.8;pointer-events:none}
+.blob .spa-dog{position:absolute;left:50%;bottom:0;height:82%;-webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent);mask-image:linear-gradient(to bottom,#000 78%,transparent);width:auto;max-width:none;transform:translateX(-50%);z-index:2;filter:drop-shadow(0 26px 30px rgba(40,70,90,.25))}
+.bubble{position:absolute;z-index:3;border-radius:50%;background:radial-gradient(circle at 30% 28%,rgba(255,255,255,.95) 0 6%,rgba(255,255,255,.12) 18%,rgba(255,255,255,.04) 55%,rgba(255,255,255,.5) 72%,rgba(255,255,255,.08) 76%);border:1px solid rgba(255,255,255,.6);animation:rise var(--d,9s) linear infinite;animation-delay:var(--dl,0s);pointer-events:none}
+@keyframes rise{0%{transform:translateY(40px) scale(.7);opacity:0}15%{opacity:1}100%{transform:translateY(-420px) translateX(var(--sx,20px)) scale(1.05);opacity:0}}
+.orbit{position:absolute;z-index:4;width:clamp(120px,13vw,200px);aspect-ratio:1;border-radius:50%;border:1.5px dashed rgba(255,255,255,.75);display:grid;place-items:center;transition:background .35s,transform .45s cubic-bezier(.2,1.4,.4,1)}
+.orbit svg{width:42%;height:auto;filter:drop-shadow(0 10px 10px rgba(40,70,90,.25));transition:transform .5s cubic-bezier(.2,1.4,.4,1)}
+.orbit .lbl{position:absolute;left:50%;bottom:-6px;transform:translate(-50%,100%);white-space:nowrap;font-weight:700;font-size:14px;color:#fff;letter-spacing:.04em;text-transform:uppercase;text-shadow:0 1px 8px rgba(40,70,90,.35)}
+.orbit:hover,.orbit[aria-expanded="true"]{background:rgba(255,255,255,.28);border-style:solid;transform:scale(1.06)}
+.orbit:hover svg{transform:rotate(-10deg) scale(1.12)}
+.o1{left:13%;top:14%}.o2{left:6%;top:42%}.o3{left:13%;bottom:8%}.o4{right:13%;top:14%}.o5{right:6%;top:42%}.o6{right:13%;bottom:8%}
+.svc-pop{position:absolute;z-index:6;width:min(300px,80vw);padding:20px 22px;border-radius:22px;background:#fff;box-shadow:0 30px 60px rgba(40,70,90,.22);animation:pop .35s cubic-bezier(.2,1.4,.4,1) both;text-align:left}
+@keyframes pop{from{transform:scale(.9);opacity:0}}
+.svc-pop h3{font-family:var(--f-display);text-transform:uppercase;font-size:28px;color:var(--ink);line-height:1}
+.svc-pop p{margin:8px 0 12px;font-size:15px}
+.svc-pop .meta{display:flex;justify-content:space-between;font-weight:700;font-size:14px;color:var(--ink);margin-bottom:10px;font-variant-numeric:tabular-nums}
+.svc-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,2vw,28px);margin-top:clamp(40px,5vw,64px)}
+.svc-item{display:flex;flex-direction:column;gap:6px;padding-top:18px;border-top:2px solid var(--ink);min-width:0}
+.svc-item h3{font-family:var(--f-display);text-transform:uppercase;font-size:clamp(26px,2.3vw,34px);line-height:1;color:var(--ink)}
+.svc-item p{margin:0;font-size:15px;color:var(--mute)}
+.svc-item .price{font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;margin-top:auto;padding-top:8px}
+.svc-item .sketch{align-self:flex-start;padding:16px 36px;font-size:14px;margin-top:10px}
+@media (max-width:1000px){.svc-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){
+  .orbit,.svc-pop{display:none}
+  .blob{min-height:380px;border-radius:28px}
+  .blob .spa-word{font-size:46vw}
+}
+@media (max-width:520px){.svc-list{grid-template-columns:1fr}}
+
+/* ---------- CLOUDS ---------- */
+.clouds{position:relative;background:var(--mist);padding-block:clamp(110px,12vw,170px) clamp(80px,9vw,130px);text-align:center;overflow:hidden}
+.clouds .curve{position:absolute;left:0;right:0;top:-1px;width:100%;height:clamp(40px,5vw,70px)}
+.clouds .curve path{fill:var(--paper)}
+.clouds h2{position:relative;z-index:2;font-size:clamp(52px,9vw,136px);line-height:.93}
+.cloud{position:absolute;z-index:3;width:clamp(240px,22vw,340px);color:#fff;font-size:clamp(15px,1.3vw,19px);line-height:1.3;animation:bob 7s ease-in-out infinite}
+.cloud svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.cloud .txt{position:relative;padding:24% 15% 32%;display:block}
+.cloud .mark{display:block;font-family:var(--f-round);font-weight:700;font-size:40px;line-height:1;margin-bottom:6px}
+.cloud.c-blue{left:max(2%,calc(50% - 640px));top:10%}
+.cloud.c-blue svg path,.cloud.c-blue svg circle{fill:var(--cloud-blue)}
+.cloud.c-sage{right:max(2%,calc(50% - 660px));top:22%;animation-delay:-3s}
+.cloud.c-sage svg path,.cloud.c-sage svg circle{fill:var(--cloud-sage)}
+.squiggle{display:block;margin:-8px auto 18px;width:clamp(150px,16vw,240px);position:relative;z-index:2}
+.squiggle path{fill:none;stroke:var(--rose-ink);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:1100px){
+  .cloud{position:relative;left:auto!important;right:auto!important;top:auto!important;display:inline-block;vertical-align:top;width:min(47%,300px);margin:0 .5% 18px;font-size:14px}
+  .cloud .mark{font-size:30px}
+  .cloud.c-sage{margin-top:40px}
+  .clouds{padding-top:clamp(70px,10vw,110px)}
+}
+
+/* ---------- VISIT ---------- */
+.visit{padding-block:clamp(70px,9vw,130px)}
+.visit-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,80px);align-items:start}
+.visit h2{font-size:clamp(48px,7vw,104px)}
+.hours{list-style:none;margin:26px 0 0;padding:0}
+.hours li{display:flex;justify-content:space-between;gap:16px;padding-block:14px;border-bottom:1.5px solid #e9e4e1;font-size:18px;font-variant-numeric:tabular-nums}
+.hours li .t{font-weight:700;color:var(--ink)}
+.hours li .off{color:var(--mute);font-weight:500}
+.hours li.today .d{color:var(--rose-3);font-weight:700}
+.hours li.today .d::after{content:" · danas"}
+.now{display:inline-flex;align-items:center;gap:10px;margin-top:18px;font-weight:700;color:var(--ink)}
+.now i{width:10px;height:10px;border-radius:50%;background:#c9c3bf}
+.now.open i{background:#7fb36b;box-shadow:0 0 0 5px rgba(127,179,107,.2)}
+.loc-card{position:relative;border-radius:36px;padding:clamp(28px,4vw,52px);background:linear-gradient(130deg,var(--rose-1),var(--rose-2) 60%,var(--rose-3));color:#fff;overflow:hidden;min-height:440px;display:flex;flex-direction:column;gap:18px}
+.loc-card .city{font-family:var(--f-display);text-transform:uppercase;font-size:clamp(84px,11vw,170px);line-height:.85}
+.loc-card p{margin:0;max-width:30ch;position:relative;z-index:2}
+.loc-card .ig{position:relative;z-index:2;display:inline-flex;align-items:center;gap:12px;align-self:flex-start;max-width:100%;padding:14px 22px;border:1.5px solid #fff;border-radius:999px;font-weight:700;text-decoration:none;overflow-wrap:anywhere;transition:background .3s,color .3s}
+.loc-card .ig:hover{background:#fff;color:var(--rose-3)}
+.loc-card .mini-dog{position:absolute;right:-10px;bottom:-6px;height:70%;width:auto;max-width:none;pointer-events:none;filter:drop-shadow(0 20px 26px rgba(80,40,30,.3))}
+.loc-card .sketch{align-self:flex-start;margin-top:auto;z-index:2}
+@media (max-width:860px){.visit-grid{grid-template-columns:1fr}.loc-card .mini-dog{height:46%;right:-40px}}
+
+/* ---------- FOOTER ---------- */
+footer{background:var(--ink);color:#e9e2de;padding-block:clamp(56px,7vw,90px) 36px}
+footer .big{font-family:var(--f-display);text-transform:uppercase;font-size:clamp(70px,16vw,250px);line-height:.85;color:#5a5452;overflow:hidden;white-space:nowrap;margin-bottom:40px}
+footer .cols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;font-size:15px}
+footer .cols b{display:block;color:#fff;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:13px;margin-bottom:8px}
+footer .cols a,footer .linkbtn{overflow-wrap:anywhere;color:#e9e2de}
+footer .cols a{text-decoration:none}
+footer a:hover,footer .linkbtn:hover{color:var(--rose-2)}
+footer .fine{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;margin-top:44px;font-size:13px;color:#a69e9a}
+.linkbtn{text-decoration:underline;text-underline-offset:3px}
+.mode{display:inline-block;padding:2px 10px;border-radius:999px;border:1px solid #6a6360;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+@media (max-width:760px){footer .cols{grid-template-columns:1fr 1fr}}
+
+/* ---------- STICKY CTA ---------- */
+.fab{position:fixed;right:var(--gutter);bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:60;display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:999px;background:var(--ink);color:#fff;font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;box-shadow:0 18px 40px rgba(71,40,30,.28);transform:translateY(140%);opacity:0;transition:transform .5s cubic-bezier(.2,1.2,.4,1),opacity .3s,background .25s;pointer-events:none}
+.fab.show{transform:none;opacity:1;pointer-events:auto}
+.fab:hover{background:var(--rose-3)}
+@media (max-width:600px){.fab{left:16px;right:16px;justify-content:center}}
+
+/* ---------- MENU OVERLAY ---------- */
+.menu{position:fixed;inset:0;z-index:90;background:linear-gradient(118deg,var(--rose-1),var(--rose-2) 55%,var(--rose-3));display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;padding:calc(60px + env(safe-area-inset-top,0px)) var(--gutter) calc(40px + env(safe-area-inset-bottom,0px));animation:fade .35s both}
+@keyframes fade{from{opacity:0}}
+.menu a,.menu button.l{font-family:var(--f-display);text-transform:uppercase;font-size:clamp(48px,9vw,120px);line-height:1.02;color:#fff;text-decoration:none;transition:color .2s,transform .3s}
+.menu a:hover,.menu button.l:hover{color:var(--ink);transform:skewX(-6deg)}
+.menu a.ig{font-family:var(--f-body);text-transform:none;font-size:clamp(16px,2vw,22px);margin-top:18px;overflow-wrap:anywhere;text-align:center}
+.menu button.l.owner{font-family:var(--f-body);text-transform:none;font-size:clamp(18px,2vw,24px);font-weight:700;margin-top:10px;padding:10px 22px;border:1.5px solid #fff;border-radius:999px}
+.menu .close{position:absolute;top:calc(24px + env(safe-area-inset-top,0px));right:var(--gutter);color:#fff;font-weight:700;letter-spacing:.08em}
+
+/* ---------- MODALS ---------- */
+.overlay{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(71,67,65,.45);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);animation:fade .3s both}
+.modal{position:relative;width:min(780px,100%);max-height:calc(100dvh - 32px);overflow:auto;border-radius:32px;background:var(--paper);box-shadow:0 40px 100px rgba(71,40,30,.3);animation:pop .4s cubic-bezier(.2,1.2,.4,1) both}
+.modal.wide{width:min(1000px,100%)}
+.modal header{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:20px 26px;background:linear-gradient(118deg,var(--rose-1),var(--rose-2));color:#fff}
+.modal header h3{font-family:var(--f-display);text-transform:uppercase;font-size:28px;line-height:1}
+.x{width:42px;height:42px;border-radius:50%;border:1.5px solid #fff;color:#fff;display:grid;place-items:center;flex:none;font-size:16px;transition:background .2s,color .2s}
+.x:hover{background:#fff;color:var(--rose-3)}
+.modal .body{padding:26px}
+.modal footer.mf{position:sticky;bottom:0;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:16px 26px;background:rgba(255,255,255,.96);border-top:1.5px solid #f0eae7;color:var(--text)}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin-bottom:22px}
+.steps .s{height:4px;border-radius:4px;background:#f0e6e2;transition:background .4s}
+.steps .s.on{background:var(--rose-3)}
+.steplbl{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin:0 0 6px}
+.qtitle{font-family:var(--f-display);text-transform:uppercase;color:var(--ink);font-size:clamp(34px,5vw,52px);line-height:.95;margin-bottom:22px}
+.opts{display:grid;gap:12px}
+.opts.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.opts.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:600px){.opts.three,.opts.two{grid-template-columns:1fr}}
+.opt{display:flex;flex-direction:column;gap:4px;text-align:left;padding:20px;border-radius:24px;background:var(--mist);border:2px solid transparent;transition:border-color .2s,background .2s,transform .25s cubic-bezier(.2,1.4,.4,1)}
+.opt:hover{transform:translateY(-3px);border-color:var(--rose-2)}
+.opt[aria-pressed="true"]{border-color:var(--rose-3);background:#fbefeb}
+.opt .tx{display:flex;flex-direction:column;gap:4px}
+.opt .n{font-family:var(--f-display);text-transform:uppercase;font-size:26px;line-height:1;color:var(--ink)}
+.opt .d{font-size:14px;color:var(--mute)}
+.opt .m{font-weight:700;font-size:14px;color:var(--rose-3);font-variant-numeric:tabular-nums;margin-top:4px}
+.opt .sz{height:56px;display:flex;align-items:flex-end;margin-bottom:10px}
+.opt .sz img{height:var(--h);width:auto;max-width:none}
+.days{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x mandatory}
+.day{flex:none;scroll-snap-align:start;width:66px;padding:12px 0;border-radius:20px;background:var(--mist);border:2px solid transparent;text-align:center;display:flex;flex-direction:column}
+.day .w{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.day .n{font-family:var(--f-display);font-size:28px;line-height:1.1;color:var(--ink)}
+.day .mo{font-size:11px;color:var(--mute)}
+.day[disabled]{opacity:.35;cursor:not-allowed}
+.day[disabled] .n{text-decoration:line-through}
+.day[aria-pressed="true"]{border-color:var(--rose-3);background:#fbefeb}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(86px,1fr));gap:8px;margin-top:16px}
+.slot{padding:12px 0;border-radius:999px;border:1.5px solid #e6dcd8;font-weight:700;font-variant-numeric:tabular-nums;transition:background .2s,border-color .2s}
+.slot:hover{border-color:var(--rose-3)}
+.slot[aria-pressed="true"]{background:var(--rose-3);border-color:var(--rose-3);color:#fff}
+.empty{padding:24px;border-radius:22px;border:1.5px dashed #e3d7d2;color:var(--mute);font-size:15px;text-align:center}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field label{font-size:14px;font-weight:600;color:var(--mute)}
+.field input,.field textarea,.field select{font:inherit;color:var(--text);background:var(--mist);border:2px solid transparent;border-radius:18px;padding:13px 16px;width:100%}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--rose-2);background:#fff}
+.field textarea{resize:vertical;min-height:90px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:600px){.grid2{grid-template-columns:1fr}}
+.summary{display:flex;flex-direction:column;font-size:14px;color:var(--mute);min-width:0}
+.summary b{color:var(--ink);font-size:17px;font-variant-numeric:tabular-nums}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:999px;background:var(--ink);color:#fff;font-weight:700;letter-spacing:.04em;text-transform:uppercase;font-size:14px;transition:background .25s,transform .25s}
+.btn:hover{background:var(--rose-3);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid #d9d0cc}
+.btn.ghost:hover{border-color:var(--rose-3);color:var(--rose-3);background:transparent}
+.btn[disabled]{opacity:.35;pointer-events:none}
+.btn.mini{padding:9px 16px;font-size:12px}
+.btn.danger{color:#b4553f;border-color:#e8c2b8}
+.hint{margin:16px 0 0;font-size:14px;color:var(--mute)}
+.err{color:#b4553f;font-weight:600;margin-top:14px}
+.done{text-align:center;padding-block:10px}
+.done img{height:190px;width:auto;margin:0 auto}
+.done .big{font-family:var(--f-display);text-transform:uppercase;font-size:clamp(40px,7vw,64px);color:var(--ink);line-height:.95;margin:10px 0}
+.receipt{margin:22px auto 0;max-width:440px;text-align:left;border-radius:22px;background:var(--mist);padding:6px 20px}
+.receipt div{display:flex;justify-content:space-between;gap:12px;padding-block:11px;border-bottom:1.5px dashed #e2d9d5;font-size:15px}
+.receipt div:last-child{border-bottom:0}
+.receipt span:first-child{color:var(--mute)}
+.receipt span:last-child{font-weight:700;color:var(--ink);text-align:right}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.tab{padding:10px 18px;border-radius:999px;background:var(--mist);font-weight:700;font-size:14px}
+.tab[aria-selected="true"]{background:var(--ink);color:#fff}
+.hrow{display:grid;grid-template-columns:130px auto 1fr 1fr;gap:14px;align-items:center;padding-block:10px;border-bottom:1.5px solid #f0eae7}
+.hrow .dn{font-weight:700;color:var(--ink)}
+@media (max-width:600px){.hrow{grid-template-columns:1fr auto}}
+.switch{position:relative;width:50px;height:28px;border-radius:999px;background:#e3dcd9;flex:none;transition:background .2s}
+.switch::after{content:"";position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.15);transition:transform .25s cubic-bezier(.2,1.4,.4,1)}
+.switch[aria-checked="true"]{background:var(--rose-3)}
+.switch[aria-checked="true"]::after{transform:translateX(22px)}
+.blist,.alist{list-style:none;padding:0;margin:16px 0 0;display:flex;flex-direction:column;gap:8px}
+.blist li,.alist li{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 18px;border-radius:20px;background:var(--mist);flex-wrap:wrap}
+.alist .when{font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;min-width:16ch}
+.alist .who{flex:1;min-width:180px;font-size:15px}
+.alist .who small{display:block;color:var(--mute);font-size:13px}
+.tagp{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:#fff;color:var(--rose-3)}
+.confirm{display:flex;gap:8px;align-items:center;font-size:14px;color:var(--mute)}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:200;padding:13px 22px;border-radius:999px;background:var(--ink);color:#fff;font-weight:600;animation:pop .3s both;max-width:calc(100% - 32px)}
+
+/* ---------- MOBILE / TABLET REFINEMENTS ---------- */
+@media (max-width:600px){
+  .statement h2{font-size:clamp(34px,10vw,46px)}
+  .story h2,.visit h2{font-size:clamp(42px,12vw,60px)}
+  .spa h2{font-size:clamp(50px,15vw,72px)}
+  .clouds h2{font-size:clamp(40px,12vw,60px)}
+  .story .copy{text-align:left}
+  .svc-item .sketch{padding:14px 30px}
+  .loc-card{min-height:380px;border-radius:28px}
+  .loc-card .ig{font-size:14px;padding:12px 16px}
+  .loc-card .mini-dog{height:38%;right:-18px}
+  .loc-card p{max-width:24ch}
+  footer{padding-bottom:110px}
+  /* booking + admin become a bottom sheet */
+  .overlay{padding:0;align-items:flex-end}
+  .modal,.modal.wide{width:100%;max-height:94dvh;border-radius:28px 28px 0 0;animation:sheet .45s cubic-bezier(.2,1,.3,1) both}
+  .modal header{padding:16px 20px}
+  .modal header h3{font-size:24px}
+  .modal .body{padding:20px}
+  .modal footer.mf{padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px))}
+  .mf .summary{width:100%}
+  .mf>div:last-child{width:100%}
+  .mf .btn{flex:1;justify-content:center}
+  .qtitle{font-size:34px;margin-bottom:16px}
+  .opt{padding:16px;border-radius:20px}
+  .opts.three .opt{flex-direction:row;align-items:center;gap:14px}
+  .opts.three .opt .sz{margin:0;height:56px;width:30px;justify-content:center}
+  .opts.three .opt .n{font-size:24px}
+  .hrow .field label{font-size:12px}
+}
+@keyframes sheet{from{transform:translateY(100%)}}
+@media (min-width:601px) and (max-width:1100px){
+  .statement h2{font-size:clamp(48px,8vw,80px)}
+  .visit-grid{gap:40px}
+}
+
+.reveal{transition:transform 1s cubic-bezier(.2,.8,.2,1),opacity 1s}
+.reveal.pre{transform:translateY(40px);opacity:.2}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal.pre{transform:none;opacity:1}
+}
+</style>
+
+</head>
+<body>
+<!-- ============================================================
+     SLIKA BOSTONCA
+     Slike psa (PNG sa providnom pozadinom):
+       pas-sedi.png    — početni ekran, izbor veličine
+       pas-portret.png — slike u naslovu, SPA oblak, pas koji viri
+       pas-trci.png    — kartica „Čačak", potvrda termina
+     Zamenite fajl istog imena da promenite sliku.
+     ============================================================ -->
+
+<header class="hero" id="top" data-slide="0">
+  <nav class="nav" aria-label="Glavna navigacija">
+    <!-- LOGO: zamenite tekst svojim logom, npr. <img src="logo.png" alt="Njuškica"> -->
+    <a class="logo" href="#top" aria-label="Njuškica, početak">LOGO</a>
+    <button class="menu-btn" id="menuBtn" aria-haspopup="dialog"><i></i>MENI</button>
+    <button class="pill-out" data-book>Zakaži <span aria-hidden="true">→</span></button>
+  </nav>
+
+  <svg class="hero-heart" viewBox="0 0 100 90" aria-hidden="true"><path d="M50 88C20 66 2 50 2 27 2 12 14 2 28 2c10 0 17 5 22 13C55 7 62 2 72 2c14 0 26 10 26 25 0 23-18 39-48 61Z"/></svg>
+  <h1 class="hero-title"><span>Nega kakvu</span><span>vaš ljubimac</span><span class="sr"> zaslužuje</span></h1>
+  <div class="hero-word" id="heroWord" aria-hidden="true"></div>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+        <linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbe3da"/><stop offset=".55" stop-color="#eebcad"/><stop offset="1" stop-color="#d79a88"/></linearGradient>
+        <linearGradient id="rg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6cfc3"/><stop offset="1" stop-color="#cf8d7b"/></linearGradient>
+        <linearGradient id="metal" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#b9745f"/><stop offset=".45" stop-color="#ffe6dc"/><stop offset="1" stop-color="#a8624f"/></linearGradient>
+        <radialGradient id="hg" cx=".35" cy=".3" r=".85"><stop offset="0" stop-color="#ffece5"/><stop offset=".55" stop-color="#eeb8a8"/><stop offset="1" stop-color="#c98472"/></radialGradient>
+        <radialGradient id="lockg" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#ffe9e1"/><stop offset=".5" stop-color="#e9ad9b"/><stop offset="1" stop-color="#b8705e"/></radialGradient>
+        <linearGradient id="ib" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4f8fa"/><stop offset=".6" stop-color="#b6cbd5"/><stop offset="1" stop-color="#7f9dad"/></linearGradient>
+      </defs></svg>
+
+  <!-- soap bubbles -->
+  <div class="bubbles" id="heroBubbles" aria-hidden="true"></div>
+
+  <!-- hand-written notes -->
+  <div class="note n-left" data-depth="18" aria-hidden="true">
+    <span>jedan pas<br>po terminu</span>
+    <svg viewBox="0 0 160 90"><path d="M6 10c40 2 92 14 124 50M130 60l-2-22M130 60l-21-4"/></svg>
+  </div>
+  <button class="note n-right" data-depth="24" data-book>
+    <span>prvi slobodan termin:<br><b id="heroNext">…</b></span>
+    <svg viewBox="0 0 160 90" aria-hidden="true"><path d="M150 12C112 16 62 30 30 64M30 64l3-22M30 64l21-3"/></svg>
+  </button>
+
+  <div class="peek" aria-hidden="true"><img src="pas-portret.png" alt=""></div>
+
+  <div class="hero-dog" id="heroDog"><img src="pas-sedi.png" alt="Boston terijer, maskota salona Njuškica" fetchpriority="high"></div>
+  <button class="pet-me" id="petMe" aria-label="Pomazi psa">
+    <svg viewBox="0 0 200 120" aria-hidden="true"><path d="M14 30C40 14 80 8 118 10c44 2 76 22 76 50 0 32-44 54-96 54C46 114 6 92 6 62 6 40 26 22 60 14"/></svg>
+    MAZI ME
+  </button>
+
+  <button class="hero-arrow prev" id="prevSlide" aria-label="Prethodni slajd">
+    <svg viewBox="0 0 180 110" aria-hidden="true"><path d="M176 64C130 58 70 60 6 66M6 66C30 44 54 26 76 8M6 66c26 18 56 30 84 40M10 64c40-4 80-4 120-2"/></svg>
+  </button>
+  <button class="hero-arrow next" id="nextSlide" aria-label="Sledeći slajd">
+    <svg viewBox="0 0 180 110" aria-hidden="true"><path d="M4 48c46 6 106 4 170-2M174 46C150 68 126 86 104 104M174 46c-26-18-56-30-84-40M170 48c-40 4-80 4-120 2"/></svg>
+  </button>
+
+  <svg class="wave" viewBox="0 0 1440 130" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60C240 18 470 8 720 52s520 70 720 6V130H0Z"/></svg>
+</header>
+
+<main>
+  <section class="statement wrap">
+    <h2 class="display reveal">Šišanje
+      <span class="pic" style="--t:-3deg"><img src="pas-portret.png" alt="" style="--zh:260%;--x:5%;--y:-72%"></span>
+      po meri, kupanje
+      <span class="pic" style="--a:#e5eef2;--b:#a9c3cf;--t:2deg"><img src="pas-portret.png" alt="" style="--zh:400%;--x:-20%;--y:-110%"></span>
+      i fen, nokti, uši i
+      <span class="pic" style="--a:#f1efed;--b:#bdb5af;--t:-2deg"><img src="pas-portret.png" alt="" style="--zh:230%;--x:8%;--y:-88%"></span>
+      puno maženja</h2>
+    <p class="reveal">Kod nas pas ne čeka u kavezu. Ima ceo salon i celu našu pažnju.</p>
+    <button class="sketch reveal" data-book>
+      <svg viewBox="0 0 260 90" preserveAspectRatio="none" aria-hidden="true"><path d="M20 22C70 8 150 4 200 12c40 6 56 22 52 38-6 26-70 38-130 36C56 84 8 70 8 48 8 30 30 18 74 12"/></svg>
+      Zakaži <span class="arr">→</span>
+    </button>
+  </section>
+
+  <section class="story wrap" id="o-nama">
+    <h2 class="display reveal">Salon za pse u Čačku</h2>
+    <div class="copy reveal">
+      <p>Vaš pas vas obožava, ali kupanje u kadi baš i ne voli. Zato postoji Njuškica: mali salon u Čačku gde se šišanje, kupanje i nega rade polako, nežno i bez stresa.</p>
+      <p>U terminu je samo jedan pas. Isti groomer ga dočeka, okupa, ošiša i isprati. Koristimo tihi fen, hidraulični sto i kozmetiku za tip dlake i osetljivu kožu.</p>
+      <p>Mali, srednji ili veliki, svako dobija tretman po svojoj meri. Termin zakažite online za par klikova, a pitanja nam pošaljite na Instagram.</p>
+    </div>
+  </section>
+
+  <section class="spa wrap" id="usluge">
+    <h2 class="display reveal">Naše<br>usluge</h2>
+    <div class="blob" id="blob">
+      <div class="spa-word" aria-hidden="true">SPA</div>
+      <img class="spa-dog" src="pas-portret.png" alt="" loading="lazy">
+    </div>
+    <div class="svc-list" id="svcList"></div>
+  </section>
+
+  <section class="clouds">
+    <svg class="curve" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0H1440V0C1100 60 340 60 0 0Z"/></svg>
+    <div class="cloud c-blue"><svg viewBox="0 0 300 260" preserveAspectRatio="none" aria-hidden="true"><path d="M60 196C24 196 6 172 10 146c4-22 22-34 40-34-6-30 14-58 46-60 14-28 46-42 78-32 26 8 44 30 46 54 30 0 52 22 54 50 2 30-22 56-54 60-18 2-34 2-50 2-10 12-26 14-38 8-20 4-50 4-72 2Z"/><circle cx="96" cy="222" r="15"/><circle cx="118" cy="248" r="9"/></svg>
+      <span class="txt"><span class="mark">!!</span>Da li vam pas posle šetnje miriše kao šetnja?</span></div>
+    <div class="cloud c-sage"><svg viewBox="0 0 300 260" preserveAspectRatio="none" aria-hidden="true"><path d="M60 196C24 196 6 172 10 146c4-22 22-34 40-34-6-30 14-58 46-60 14-28 46-42 78-32 26 8 44 30 46 54 30 0 52 22 54 50 2 30-22 56-54 60-18 2-34 2-50 2-10 12-26 14-38 8-20 4-50 4-72 2Z"/><circle cx="20" cy="226" r="13"/></svg>
+      <span class="txt"><span class="mark">??</span>Kuckaju li nokti po parketu kao štikle?</span></div>
+    <h2 class="display reveal">Dosta je bilo…<br>vreme je za<br>Njuškicu</h2>
+    <svg class="squiggle" viewBox="0 0 240 130" aria-hidden="true"><path d="M220 20c-14 40-50 70-84 44-24-18-48-44-76-30-24 12-30 46-26 84M34 118 14 86M34 118l26-28"/></svg>
+    <button class="sketch grey" data-book>
+      <svg viewBox="0 0 260 90" preserveAspectRatio="none" aria-hidden="true"><path d="M20 22C70 8 150 4 200 12c40 6 56 22 52 38-6 26-70 38-130 36C56 84 8 70 8 48 8 30 30 18 74 12"/></svg>
+      Zakaži termin
+    </button>
+  </section>
+
+  <section class="visit wrap" id="radno-vreme">
+    <div class="visit-grid">
+      <div class="reveal">
+        <h2 class="display">Radno vreme</h2>
+        <div class="now" id="nowStatus"><i></i><span>—</span></div>
+        <ul class="hours" id="hoursList"></ul>
+        <p style="color:var(--mute);margin-top:18px">Prvi slobodan termin: <b id="nextFree" style="color:var(--ink)">proveravam…</b></p>
+      </div>
+      <div class="loc-card reveal">
+        <div class="city">Čačak</div>
+        <!-- TODO: upišite tačnu adresu salona -->
+        <p>Tačnu adresu i uputstvo za dolazak šaljemo uz potvrdu termina. Za sva pitanja pišite nam na Instagramu.</p>
+        <a class="ig" href="https://www.instagram.com/salon_za_sisanje_pasanjuskica/" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          @salon_za_sisanje_pasanjuskica
+        </a>
+        <button class="sketch light" data-book>
+          <svg viewBox="0 0 260 90" preserveAspectRatio="none" aria-hidden="true"><path d="M20 22C70 8 150 4 200 12c40 6 56 22 52 38-6 26-70 38-130 36C56 84 8 70 8 48 8 30 30 18 74 12"/></svg>
+          Zakaži <span class="arr">→</span>
+        </button>
+        <img class="mini-dog" src="pas-trci.png" alt="" loading="lazy">
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="big" aria-hidden="true">Njuškica</div>
+    <div class="cols">
+      <div><b>Njuškica</b>Salon za šišanje i negu pasa<br>Čačak, Srbija</div>
+      <div><b>Kontakt</b><a href="https://www.instagram.com/salon_za_sisanje_pasanjuskica/" target="_blank" rel="noopener">Poruka na Instagramu</a><!-- TODO: telefon --></div>
+      <div><b>Instagram</b><a href="https://www.instagram.com/salon_za_sisanje_pasanjuskica/" target="_blank" rel="noopener">@salon_za_sisanje_pasanjuskica</a></div>
+      <div><b>Termini</b><button class="linkbtn" data-book>Online zakazivanje</button></div>
+    </div>
+    <div class="fine">
+      <span>© <span id="yr"></span> Njuškica · Čačak</span>
+      <span><button class="linkbtn" id="adminBtn">Za vlasnika</button> · <span class="mode" id="modePill">…</span></span>
+    </div>
+  </div>
+</footer>
+
+<button class="fab" id="fab" data-book aria-hidden="true" tabindex="-1">Zakaži termin <span aria-hidden="true">→</span></button>
+<div id="modalRoot"></div>
+
+<script>
+/* =================================================================
+   1. CONFIG
+   ================================================================= */
+const IMG={sedi:"pas-sedi.png",trci:"pas-trci.png",portret:"pas-portret.png"};
+const HERO_WORDS=["zaslužuje","kupanje","šišanje"];
+const SIZES=[
+  {id:"mali",name:"Maleni",desc:"do 10 kg · čivava, pomeranac, bostonac",h:"30px"},
+  {id:"srednji",name:"Srednji",desc:"10–25 kg · bigl, koker, šnaucer",h:"42px"},
+  {id:"veliki",name:"Veliki",desc:"preko 25 kg · retriver, haski",h:"56px"}
+];
+// TODO: okvirne cene (RSD) i trajanje (min) po veličini [mali, srednji, veliki] — zamenite cenama salona
+const TREATMENTS=[
+  {id:"sisanje",name:"Šišanje & Stajling",short:"Šišanje",desc:"Kupanje, feniranje, šišanje po rasi ili po želji, nokti i uši.",price:[[2500,3200],[3200,4200],[4200,5500]],dur:[90,120,150]},
+  {id:"kupanje",name:"Kupanje & Feniranje",short:"Kupanje",desc:"Dubinsko pranje šamponom za tip dlake, maska i fen.",price:[[1500,2000],[2000,2800],[2800,3800]],dur:[60,75,90]},
+  {id:"nokti",name:"Higijena noktiju & ušiju",short:"Nokti & uši",desc:"Skraćivanje i turpijanje noktiju, čišćenje ušiju, šapice.",price:[[600,900],[700,1000],[900,1300]],dur:[30,30,30]},
+  {id:"linjanje",name:"Tretman protiv linjanja",short:"Linjanje",desc:"Raščešljavanje podlake, kupka protiv linjanja i jak fen.",price:[[2000,2600],[2600,3400],[3400,4500]],dur:[75,90,120]}
+];
+const DAYS=["Nedelja","Ponedeljak","Utorak","Sreda","Četvrtak","Petak","Subota"];
+const DAYS_SHORT=["Ned","Pon","Uto","Sre","Čet","Pet","Sub"];
+const MONTHS=["jan","feb","mar","apr","maj","jun","jul","avg","sep","okt","nov","dec"];
+const DEFAULT_SETTINGS={slotStep:30,bookAhead:28,
+  hours:{"1":{on:true,open:"09:00",close:"17:00"},"2":{on:true,open:"09:00",close:"17:00"},"3":{on:true,open:"09:00",close:"17:00"},
+         "4":{on:true,open:"09:00",close:"17:00"},"5":{on:true,open:"09:00",close:"17:00"},"6":{on:true,open:"09:00",close:"14:00"},
+         "0":{on:false,open:"09:00",close:"14:00"}},
+  blocks:[]};
+
+/* =================================================================
+   2. HELPERS
+   ================================================================= */
+const $=(s,el=document)=>el.querySelector(s);
+const h=(html)=>{const t=document.createElement("template");t.innerHTML=html.trim();return t.content.firstElementChild};
+const esc=(s)=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const toMin=(t)=>{const [a,b]=t.split(":").map(Number);return a*60+b};
+const toHM=(m)=>String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padStart(2,"0");
+const ymd=(d)=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+const parseYmd=(s)=>{const [y,m,d]=s.split("-").map(Number);return new Date(y,m-1,d)};
+const fmtRSD=(n)=>String(n).replace(/\B(?=(\d{3})+(?!\d))/g,".");
+const fmtDur=(m)=>m<60?m+" min":(Math.floor(m/60)+" h"+(m%60?" "+(m%60)+" min":""));
+const prettyDate=(s)=>{const d=parseYmd(s);return DAYS_SHORT[d.getDay()]+", "+d.getDate()+". "+MONTHS[d.getMonth()]};
+const rid=()=>Math.random().toString(36).slice(2,10)+Date.now().toString(36).slice(-4);
+function toast(msg){const t=h(`<div class="toast" role="status">${esc(msg)}</div>`);document.body.append(t);setTimeout(()=>t.remove(),2600)}
+const reduced=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const SKETCH=`<svg viewBox="0 0 260 90" preserveAspectRatio="none" aria-hidden="true"><path d="M20 22C70 8 150 4 200 12c40 6 56 22 52 38-6 26-70 38-130 36C56 84 8 70 8 48 8 30 30 18 74 12"/></svg>`;
+
+/* =================================================================
+   3. STORE — shared db when available, browser-local demo otherwise
+     salon/config                 hours + blocks                  (all read, editors write)
+     termini/<id>                 {date,start,dur,svc,size,uid}   public, no personal data
+     zahtevi/<uid>/stavke/<id>    {owner,phone,dog,note}          client + editors only
+   ================================================================= */
+const Store={
+  mode:"init",settings:structuredClone(DEFAULT_SETTINGS),bookings:[],isAdmin:false,canWrite:true,uid:null,db:null,subs:new Set(),
+  emit(){this.subs.forEach(f=>f())},on(f){this.subs.add(f)},
+  _k:"njuskica-demo-v1",
+  _loadLocal(){try{const r=localStorage.getItem(this._k);if(r){const j=JSON.parse(r);this.settings=Object.assign(structuredClone(DEFAULT_SETTINGS),j.settings||{});this.bookings=j.bookings||[]}}catch(e){}},
+  _saveLocal(){try{localStorage.setItem(this._k,JSON.stringify({settings:this.settings,bookings:this.bookings}))}catch(e){}},
+  async init(){
+    const c=window.claude;let db=null,user=null;
+    if(c&&typeof c.use==="function"){try{[db,user]=await Promise.all([c.use("db"),c.use("user")])}catch(e){db=null}}
+    if(!db){this.mode="local";this.isAdmin=true;this._loadLocal();this.emit();return}
+    this.mode="live";this.db=db;
+    try{this.isAdmin=user?await user.canEdit():false}catch(e){}
+    try{this.uid=user?await user.id():null}catch(e){}
+    try{const w=user?await user.can("data.write"):null;this.canWrite=(w!==false)&&!!this.uid}catch(e){}
+    db.doc("salon/config").onSnapshot(s=>{const d=s.exists?s.data():null;
+      this.settings=d?{...structuredClone(DEFAULT_SETTINGS),...JSON.parse(JSON.stringify(d))}:structuredClone(DEFAULT_SETTINGS);this.emit()},()=>{});
+    db.collection("termini").where("date",">=",ymd(new Date())).onSnapshot(s=>{this.bookings=s.docs.map(d=>({id:d.id,...d.data()}));this.emit()},()=>{});
+    this.emit();
+  },
+  async saveSettings(next){
+    if(this.mode==="local"){this.settings=next;this._saveLocal();this.emit();return}
+    await this.db.doc("salon/config").set(JSON.parse(JSON.stringify(next)));
+  },
+  async book(slot,details){
+    if(this.mode==="local"){
+      if(!isFree(slot.date,toMin(slot.start),slot.dur,this.bookings,this.settings)) throw new Error("taken");
+      this.bookings.push({id:rid(),...slot,uid:"demo",details,created:Date.now()});this._saveLocal();this.emit();return;
+    }
+    if(!this.canWrite) throw new Error("nowrite");
+    const got=await this.db.doc("brave/"+slot.date).acquire({holder:this.uid,ttlMs:8000});
+    if(!got.acquired) throw new Error("busy");
+    const day=await this.db.collection("termini").where("date","==",slot.date).get();
+    if(!isFree(slot.date,toMin(slot.start),slot.dur,day.docs.map(d=>d.data()),this.settings)) throw new Error("taken");
+    const id=rid();
+    await this.db.doc(`zahtevi/${this.uid}/stavke/${id}`).set({...details,created:Date.now()});
+    await this.db.doc("termini/"+id).set({...slot,uid:this.uid,created:Date.now()});
+  },
+  async details(b){
+    if(this.mode==="local") return b.details||null;
+    try{const s=await this.db.doc(`zahtevi/${b.uid}/stavke/${b.id}`).get();return s.exists?s.data():null}catch(e){return null}
+  },
+  async cancel(b){
+    if(this.mode==="local"){this.bookings=this.bookings.filter(x=>x.id!==b.id);this._saveLocal();this.emit();return}
+    await this.db.doc("termini/"+b.id).delete();
+    try{await this.db.doc(`zahtevi/${b.uid}/stavke/${b.id}`).delete()}catch(e){}
+  }
+};
+
+/* =================================================================
+   4. AVAILABILITY
+   ================================================================= */
+function dayWindow(ds,s){
+  const hrs=s.hours[String(parseYmd(ds).getDay())];if(!hrs||!hrs.on) return null;
+  const bl=(s.blocks||[]).filter(b=>b.date===ds);if(bl.some(b=>b.allDay)) return null;
+  return {open:toMin(hrs.open),close:toMin(hrs.close),blocks:bl.map(b=>[toMin(b.from),toMin(b.to)])};
+}
+const overlaps=(a1,a2,b1,b2)=>a1<b2&&b1<a2;
+function isFree(ds,start,dur,bookings,s){
+  const w=dayWindow(ds,s);if(!w) return false;const end=start+dur;
+  if(start<w.open||end>w.close) return false;
+  if(w.blocks.some(([f,t])=>overlaps(start,end,f,t))) return false;
+  if(bookings.some(b=>b.date===ds&&overlaps(start,end,toMin(b.start),toMin(b.start)+b.dur))) return false;
+  if(ds===ymd(new Date())){const n=new Date();if(start<n.getHours()*60+n.getMinutes()+30) return false}
+  return true;
+}
+function freeSlots(ds,dur,s=Store.settings,b=Store.bookings){
+  const w=dayWindow(ds,s);if(!w) return [];const out=[],step=s.slotStep||30;
+  for(let t=w.open;t+dur<=w.close;t+=step) if(isFree(ds,t,dur,b,s)) out.push(toHM(t));
+  return out;
+}
+function nextFree(dur=60){
+  const d=new Date();
+  for(let i=0;i<(Store.settings.bookAhead||28);i++){const ds=ymd(d),sl=freeSlots(ds,dur);
+    if(sl.length) return (i===0?"danas":i===1?"sutra":prettyDate(ds))+" u "+sl[0];d.setDate(d.getDate()+1)}
+  return "trenutno nema slobodnih";
+}
+
+/* =================================================================
+   5. LANDING
+   ================================================================= */
+let slide=0;
+function setWord(w){$("#heroWord").innerHTML=[...w].map((c,i)=>`<span class="ch" style="animation-delay:${i*45}ms">${esc(c)}</span>`).join("")}
+function goSlide(d){slide=(slide+d+HERO_WORDS.length)%HERO_WORDS.length;$(".hero").dataset.slide=slide;setWord(HERO_WORDS[slide]);wiggle()}
+function wiggle(){const d=$("#heroDog");d.classList.remove("wiggle");void d.offsetWidth;d.classList.add("wiggle")}
+function petDog(){
+  wiggle();if(reduced) return;
+  const hero=$(".hero"),r=hero.getBoundingClientRect(),b=$("#petMe").getBoundingClientRect();
+  for(let i=0;i<9;i++){
+    const s=h(`<span class="burst" aria-hidden="true">♥</span>`);
+    s.style.left=(b.left-r.left+b.width/2-10)+"px";s.style.top=(b.top-r.top+20)+"px";
+    s.style.setProperty("--dx",(Math.random()*240-120)+"px");s.style.setProperty("--dy",(-120-Math.random()*160)+"px");s.style.setProperty("--r",(Math.random()*60-30)+"deg");
+    s.style.fontSize=(18+Math.random()*22)+"px";hero.append(s);setTimeout(()=>s.remove(),1300);
+  }
+}
+function heroBubbles(){
+  const el=$("#heroBubbles"),narrow=innerWidth<860;
+  const spots=narrow?[[8,40,46],[84,26,30],[78,52,58],[14,66,22]]:
+    [[24,22,70],[16,58,38],[30,74,24],[66,20,30],[74,48,84],[86,70,40],[58,64,22],[40,30,18],[90,18,26]];
+  spots.forEach(([x,y,sz],i)=>{const b=h(`<span class="hb" data-depth="${10+sz/3}"></span>`);
+    Object.assign(b.style,{left:x+"%",top:y+"%",width:sz+"px",height:sz+"px"});
+    b.style.setProperty("--d",(10+i%4*3)+"s");b.style.setProperty("--dl",(-i*1.7)+"s");
+    b.style.setProperty("--mx",((i%2?1:-1)*(8+i*2))+"px");b.style.setProperty("--my",(-14-i*3)+"px");el.append(b)});
+}
+function heroParallax(){
+  if(reduced) return;
+  const hero=$(".hero"),fl=[...hero.querySelectorAll("[data-depth]")];
+  let mx=0,my=0,cx=0,cy=0,raf=0;
+  hero.addEventListener("pointermove",e=>{const r=hero.getBoundingClientRect();mx=(e.clientX-r.left)/r.width-.5;my=(e.clientY-r.top)/r.height-.5;if(!raf)raf=requestAnimationFrame(tick)});
+  window.addEventListener("scroll",()=>{if(!raf)raf=requestAnimationFrame(tick)},{passive:true});
+  function tick(){raf=0;cx+=(mx-cx)*.12;cy+=(my-cy)*.12;const sy=Math.min(scrollY,900);
+    fl.forEach(el=>{const d=+el.dataset.depth;el.style.translate=`${-cx*d}px ${-cy*d-sy*d/90}px`});
+    $("#heroWord").style.translate=`${cx*-14}px ${sy*.12}px`;
+    if(Math.abs(mx-cx)>.002||Math.abs(my-cy)>.002) raf=requestAnimationFrame(tick)}
+}
+const ICONS={
+  drop:`<svg viewBox="0 0 60 60"><path d="M30 4c11 15 18 25 18 34a18 18 0 0 1-36 0c0-9 7-19 18-34Z" fill="url(#ib)"/><ellipse cx="23" cy="36" rx="4" ry="8" fill="#fff" opacity=".7"/></svg>`,
+  scissors:`<svg viewBox="0 0 60 60"><g fill="none" stroke="url(#ib)" stroke-width="5" stroke-linecap="round"><circle cx="14" cy="44" r="8"/><circle cx="14" cy="16" r="8"/><path d="M21 20l35 26M21 40l35-26"/></g></svg>`,
+  bottle:`<svg viewBox="0 0 60 60"><rect x="24" y="2" width="12" height="8" rx="2" fill="#a9c0cb"/><path d="M36 6h12" stroke="#a9c0cb" stroke-width="4" stroke-linecap="round"/><rect x="14" y="12" width="32" height="46" rx="10" fill="url(#ib)"/><path d="M30 26v18M21 35h18" stroke="#fff" stroke-width="5" stroke-linecap="round"/></svg>`,
+  comb:`<svg viewBox="0 0 60 60"><rect x="4" y="12" width="52" height="12" rx="5" fill="url(#ib)"/><g stroke="#9fb7c3" stroke-width="3.5" stroke-linecap="round"><path d="M10 24v22M17 24v22M24 24v22M31 24v22M38 24v22M45 24v22M52 24v16"/></g></svg>`,
+  heart:`<svg viewBox="0 0 60 60"><rect x="6" y="8" width="48" height="38" rx="12" fill="url(#ib)"/><path d="M18 46l-4 10 14-10" fill="#b6cbd5"/><path d="M30 38c-8-6-12-10-12-15 0-4 3-6 6-6 3 0 5 2 6 4 1-2 3-4 6-4 3 0 6 2 6 6 0 5-4 9-12 15Z" fill="#fff"/></svg>`,
+  camera:`<svg viewBox="0 0 60 60"><rect x="4" y="16" width="52" height="36" rx="9" fill="url(#ib)"/><rect x="18" y="9" width="18" height="10" rx="3" fill="#a9c0cb"/><circle cx="30" cy="34" r="11" fill="#e8f0f4"/><circle cx="30" cy="34" r="6" fill="#8aa6b4"/></svg>`
+};
+function renderServices(){
+  const blob=$("#blob");
+  if(!reduced) for(let i=0;i<9;i++){const s=8+Math.random()*60;const b=h(`<span class="bubble" aria-hidden="true"></span>`);
+    Object.assign(b.style,{width:s+"px",height:s+"px",left:(32+Math.random()*36)+"%",bottom:(5+Math.random()*30)+"%"});
+    b.style.setProperty("--d",(7+Math.random()*7)+"s");b.style.setProperty("--dl",(-Math.random()*12)+"s");b.style.setProperty("--sx",(Math.random()*80-40)+"px");blob.append(b)}
+  const spots=[["o1","drop","kupanje"],["o2","scissors","sisanje"],["o3","bottle","nokti"],["o4","heart",null],["o5","comb","linjanje"],["o6","camera",null]];
+  spots.forEach(([cls,icon,svc])=>{
+    const t=TREATMENTS.find(x=>x.id===svc);
+    const label=t?t.short:(icon==="heart"?"Maženje":"Foto za Instagram");
+    const o=h(`<button class="orbit ${cls}" aria-expanded="false" aria-label="${esc(label)}">${ICONS[icon]}<span class="lbl">${esc(label)}</span></button>`);
+    o.addEventListener("click",()=>{ if(t&&!matchMedia("(min-width:761px)").matches) openBooking({svc:t.id}); else showPop(o,t,label)});
+    o.addEventListener("mouseenter",()=>{if(matchMedia("(hover:hover)").matches)showPop(o,t,label)});
+    blob.append(o);
+  });
+  blob.addEventListener("mouseleave",hidePop);
+  const list=$("#svcList");
+  list.innerHTML=TREATMENTS.map(t=>`<div class="svc-item reveal"><h3>${esc(t.name)}</h3><p>${esc(t.desc)}</p>
+    <span class="price">od ${fmtRSD(t.price[0][0])} RSD · ${fmtDur(t.dur[0])}+</span>
+    <button class="sketch" data-svc-book="${t.id}">${SKETCH}Zakaži <span class="arr">→</span></button></div>`).join("");
+  list.querySelectorAll("[data-svc-book]").forEach(b=>b.onclick=()=>openBooking({svc:b.dataset.svcBook}));
+}
+function hidePop(){document.querySelectorAll(".svc-pop").forEach(p=>p.remove());document.querySelectorAll(".orbit").forEach(o=>o.setAttribute("aria-expanded","false"))}
+function showPop(o,t,label){
+  hidePop();o.setAttribute("aria-expanded","true");
+  const blob=$("#blob"),br=blob.getBoundingClientRect(),or=o.getBoundingClientRect();
+  const right=or.left-br.left>br.width/2;
+  const p=h(`<div class="svc-pop">${t?`<h3>${esc(t.name)}</h3><p>${esc(t.desc)}</p>
+    <div class="meta"><span>od ${fmtRSD(t.price[0][0])} RSD</span><span>${fmtDur(t.dur[0])}+</span></div>
+    <button class="btn mini" data-pop-book>Zakaži →</button>`
+    :`<h3>${esc(label)}</h3><p>${label==="Maženje"?"Uz svaki tretman ide i maza. Bez doplate, koliko god treba.":"Posle tretmana slikamo ljubimca za naš Instagram, ako se slažete."}</p>`}</div>`);
+  p.style.top=Math.max(12,Math.min(or.top-br.top-10,br.height-230))+"px";
+  if(right) p.style.right=(br.right-or.left+14)+"px"; else p.style.left=(or.right-br.left+14)+"px";
+  blob.append(p);
+  const bb=p.querySelector("[data-pop-book]");if(bb) bb.onclick=()=>openBooking({svc:t.id});
+}
+function renderHours(){
+  const s=Store.settings,ul=$("#hoursList"),today=new Date().getDay();ul.innerHTML="";
+  [1,2,3,4,5,6,0].forEach(i=>{const x=s.hours[String(i)];
+    ul.append(h(`<li class="${i===today?"today":""}"><span class="d">${DAYS[i]}</span>${x&&x.on?`<span class="t">${x.open} – ${x.close}</span>`:`<span class="t off">Neradni dan</span>`}</li>`))});
+  const now=new Date(),w=dayWindow(ymd(now),s),m=now.getHours()*60+now.getMinutes();
+  const open=w&&m>=w.open&&m<w.close&&!w.blocks.some(([f,t])=>m>=f&&m<t);
+  const st=$("#nowStatus");st.classList.toggle("open",!!open);st.lastElementChild.textContent=open?`Sada radimo, do ${toHM(w.close)}`:"Sada je zatvoreno";
+  $("#nextFree").textContent=nextFree(60);$("#heroNext").textContent=nextFree(60);
+  $("#modePill").textContent=Store.mode==="live"?"termini uživo":Store.mode==="local"?"demo režim":"učitavam";
+  $("#adminBtn").hidden=!(Store.mode==="live"&&Store.isAdmin);
+}
+function openMenu(){
+  const m=h(`<div class="menu" role="dialog" aria-modal="true" aria-label="Meni">
+    <button class="close" data-mclose>ZATVORI ✕</button>
+    <a href="#o-nama" data-mclose>O nama</a><a href="#usluge" data-mclose>Usluge</a><a href="#radno-vreme" data-mclose>Radno vreme</a>
+    <button class="l" data-mbook>Zakaži</button>
+    ${Store.mode==="live"&&Store.isAdmin?`<button class="l owner" data-madmin>Za vlasnika</button>`:""}
+    <a class="ig" href="https://www.instagram.com/salon_za_sisanje_pasanjuskica/" target="_blank" rel="noopener">@salon_za_sisanje_pasanjuskica</a>
+  </div>`);
+  document.body.append(m);document.body.style.overflow="hidden";
+  const close=()=>{m.remove();document.body.style.overflow=""};
+  m.querySelectorAll("[data-mclose]").forEach(a=>a.addEventListener("click",close));
+  m.querySelector("[data-mbook]").onclick=()=>{close();openBooking()};
+  const ma=m.querySelector("[data-madmin]");if(ma)ma.onclick=()=>{close();openAdmin()};
+  m.querySelector(".close").focus();
+}
+
+/* =================================================================
+   6. BOOKING WIZARD
+   ================================================================= */
+let B=null;
+let opener=null;
+function openBooking(pre={}){hidePop();opener=document.activeElement;B={step:0,size:null,svc:pre.svc||null,date:null,time:null,owner:"",phone:"",dog:"",note:"",err:"",done:false,busy:false};renderBooking()}
+function closeModal(){$("#modalRoot").innerHTML="";B=null;A=null;document.body.style.overflow="";if(opener&&opener.focus&&document.contains(opener))opener.focus({preventScroll:true});opener=null;if(location.hash==="#admin")history.replaceState(null,"",location.pathname)}
+function calcB(){if(!B.size||!B.svc)return null;const si=SIZES.findIndex(s=>s.id===B.size),t=TREATMENTS.find(t=>t.id===B.svc);return{price:t.price[si],dur:t.dur[si],t,size:SIZES[si]}}
+function renderBooking(){
+  const root=$("#modalRoot");document.body.style.overflow="hidden";const c=calcB();
+  const titles=["Veličina psa","Tretman","Datum i vreme","Vaši podaci"];
+  let body="";
+  if(B.done){
+    body=`<div class="done"><img src="${IMG.trci}" alt=""><div class="big">Vidimo se, ${esc(B.dog)}!</div>
+      <p style="color:var(--mute);max-width:44ch;margin:0 auto">Termin je sačuvan. Salon će vas kontaktirati na ${esc(B.phone)} radi potvrde i adrese.</p>
+      <div class="receipt"><div><span>Tretman</span><span>${esc(c.t.name)}</span></div><div><span>Veličina</span><span>${esc(c.size.name)}</span></div>
+      <div><span>Termin</span><span>${prettyDate(B.date)} u ${B.time}</span></div><div><span>Trajanje</span><span>oko ${fmtDur(c.dur)}</span></div>
+      <div><span>Okvirna cena</span><span>${fmtRSD(c.price[0])}–${fmtRSD(c.price[1])} RSD</span></div></div></div>`;
+  } else if(B.step===0){
+    body=`<div class="opts three">${SIZES.map(s=>`<button class="opt" data-size="${s.id}" aria-pressed="${B.size===s.id}">
+      <span class="sz"><img src="${IMG.sedi}" alt="" style="--h:${s.h}"></span><span class="tx"><span class="n">${s.name}</span><span class="d">${s.desc}</span></span></button>`).join("")}</div>
+      <p class="hint">Niste sigurni? Izaberite bližu veličinu, a tačnu cenu potvrđujemo pri dolasku.</p>`;
+  } else if(B.step===1){
+    const si=SIZES.findIndex(s=>s.id===B.size);
+    body=`<div class="opts two">${TREATMENTS.map(t=>`<button class="opt" data-svc="${t.id}" aria-pressed="${B.svc===t.id}">
+      <span class="n">${t.name}</span><span class="d">${t.desc}</span><span class="m">${fmtRSD(t.price[si][0])}–${fmtRSD(t.price[si][1])} RSD · oko ${fmtDur(t.dur[si])}</span></button>`).join("")}</div>`;
+  } else if(B.step===2){
+    const days=[],d=new Date();
+    for(let i=0;i<(Store.settings.bookAhead||28);i++){const ds=ymd(d);days.push({ds,d:new Date(d),n:freeSlots(ds,c.dur).length});d.setDate(d.getDate()+1)}
+    if(!B.date||!days.find(x=>x.ds===B.date&&x.n)){const f=days.find(x=>x.n);B.date=f?f.ds:null}
+    const slots=B.date?freeSlots(B.date,c.dur):[];if(B.time&&!slots.includes(B.time)) B.time=null;
+    body=`<div class="days" role="group" aria-label="Izbor datuma">${days.map(x=>`<button class="day" data-date="${x.ds}" ${x.n?"":"disabled"} aria-pressed="${B.date===x.ds}">
+      <span class="w">${DAYS_SHORT[x.d.getDay()]}</span><span class="n">${x.d.getDate()}</span><span class="mo">${MONTHS[x.d.getMonth()]}</span></button>`).join("")}</div>
+      ${B.date?`<p class="steplbl" style="margin-top:20px">${prettyDate(B.date)} · slobodni termini za ${fmtDur(c.dur)}</p>`:""}
+      ${slots.length?`<div class="slots">${slots.map(t=>`<button class="slot" data-time="${t}" aria-pressed="${B.time===t}">${t}</button>`).join("")}</div>`
+        :`<div class="empty" style="margin-top:16px">Nema slobodnih termina u narednom periodu. Pišite nam na Instagram @salon_za_sisanje_pasanjuskica.</div>`}`;
+  } else {
+    body=`<form id="bf" class="grid2" novalidate>
+      <div class="field"><label for="f-owner">Ime vlasnika</label><input id="f-owner" autocomplete="name" value="${esc(B.owner)}"></div>
+      <div class="field"><label for="f-phone">Telefon</label><input id="f-phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="06x xxx xxxx" value="${esc(B.phone)}"></div>
+      <div class="field"><label for="f-dog">Ime psa</label><input id="f-dog" value="${esc(B.dog)}"></div>
+      <div class="field"><label for="f-recap">Termin</label><input id="f-recap" value="${prettyDate(B.date)} u ${B.time}" readonly></div>
+      <div class="field" style="grid-column:1/-1"><label for="f-note">Napomena (rasa, osetljivost, želje)</label><textarea id="f-note">${esc(B.note)}</textarea></div>
+    </form>`;
+  }
+  const can=[!!B.size,!!B.svc,!!(B.date&&B.time),true][B.step];
+  const prev=root.querySelector(".modal"),keep=prev&&prev.dataset.step===String(B.step)+B.done,scroll=keep?prev.scrollTop:0,fk=focusKey();
+  root.innerHTML="";
+  const ov=h(`<div class="overlay" role="dialog" aria-modal="true" aria-label="Zakazivanje tretmana"><div class="modal" data-step="${B.step}${B.done}">
+    <header><h3>${B.done?"Zakazano!":"Zakaži tretman"}</h3><button class="x" data-close aria-label="Zatvori">✕</button></header>
+    <div class="body">
+      ${B.done?"":`<div class="steps">${[0,1,2,3].map(i=>`<span class="s ${i<=B.step?"on":""}"></span>`).join("")}</div>
+      <p class="steplbl">Korak ${B.step+1} od 4 · ${titles[B.step]}</p>
+      <div class="qtitle" tabindex="-1">${["Koliki je vaš pas?","Šta mu treba?","Kada vam odgovara?","Kome da potvrdimo?"][B.step]}</div>`}
+      ${body}${B.err?`<p class="err" role="alert">${esc(B.err)}</p>`:""}
+    </div>
+    <footer class="mf">${B.done?`<span class="summary">Termin otkazujete porukom na Instagramu.</span><button class="btn" data-close>Zatvori</button>`:`
+      <div class="summary">${c?`<span>${esc(c.t.short)} · ${esc(c.size.name)}${B.time?` · ${prettyDate(B.date)} u ${B.time}`:""}</span><b>${fmtRSD(c.price[0])}–${fmtRSD(c.price[1])} RSD · oko ${fmtDur(c.dur)}</b>`:`<span>Okvirna cena i trajanje</span><b>izaberite veličinu i tretman</b>`}</div>
+      <div style="display:flex;gap:8px">${B.step>0?`<button class="btn ghost" data-back>Nazad</button>`:""}
+      <button class="btn" data-next ${can&&!B.busy?"":"disabled"}>${B.step===3?(B.busy?"Šaljem…":"Potvrdi termin"):"Dalje →"}</button></div>`}
+    </footer></div></div>`);
+  root.append(ov);
+  ov.addEventListener("click",e=>{if(e.target===ov)closeModal()});
+  ov.querySelectorAll("[data-close]").forEach(b=>b.onclick=closeModal);
+  ov.querySelectorAll("[data-size]").forEach(b=>b.onclick=()=>{B.size=b.dataset.size;B.err="";B.step=B.svc?2:1;B.date=null;B.time=null;renderBooking()});
+  ov.querySelectorAll(".opt[data-svc]").forEach(b=>b.onclick=()=>{B.svc=b.dataset.svc;B.step=2;B.date=null;B.time=null;renderBooking()});
+  ov.querySelectorAll("[data-date]").forEach(b=>b.onclick=()=>{B.date=b.dataset.date;B.time=null;renderBooking()});
+  ov.querySelectorAll("[data-time]").forEach(b=>b.onclick=()=>{B.time=b.dataset.time;renderBooking()});
+  const back=ov.querySelector("[data-back]");if(back) back.onclick=()=>{B.err="";B.step--;renderBooking()};
+  const next=ov.querySelector("[data-next]");if(next) next.onclick=submitStep;
+  const f=$("#bf");if(f){["owner","phone","dog","note"].forEach(k=>$("#f-"+k).addEventListener("input",e=>B[k]=e.target.value));f.addEventListener("submit",e=>{e.preventDefault();submitStep()})}
+  const m=ov.querySelector(".modal");m.scrollTop=scroll;
+  const sel=ov.querySelector('.day[aria-pressed="true"]');if(sel){const d=sel.parentElement;d.scrollLeft=sel.offsetLeft-d.offsetLeft-8}
+  restoreFocus(ov,fk,keep);
+}
+function focusKey(){const a=document.activeElement;if(!a||!a.closest||!a.closest("#modalRoot"))return null;
+  for(const k of ["size","svc","date","time","tab","tog"]) if(a.dataset&&a.dataset[k]!==undefined) return `[data-${k}="${a.dataset[k]}"]`;
+  for(const k of ["data-next","data-back","data-save","data-close"]) if(a.hasAttribute(k)) return `[${k}]`;
+  return a.id?"#"+a.id:null}
+function restoreFocus(ov,fk,keep){
+  const t=(keep&&fk&&ov.querySelector(fk))||(!keep&&(ov.querySelector(".qtitle")||ov.querySelector(".big")))||ov.querySelector(".x");
+  if(t){if(t.classList.contains("big"))t.tabIndex=-1;t.focus({preventScroll:true})}}
+async function submitStep(){
+  if(B.step<3){B.step++;B.err="";renderBooking();return}
+  B.owner=B.owner.trim();B.phone=B.phone.trim();B.dog=B.dog.trim();
+  if(!B.owner||!B.dog){B.err="Upišite ime vlasnika i ime psa.";return renderBooking()}
+  if(B.phone.replace(/\D/g,"").length<8){B.err="Upišite broj telefona, na primer 064 123 4567.";return renderBooking()}
+  const c=calcB();B.busy=true;B.err="";renderBooking();
+  try{await Store.book({date:B.date,start:B.time,dur:c.dur,svc:B.svc,size:B.size},{owner:B.owner,phone:B.phone,dog:B.dog,note:B.note.trim()});B.done=true}
+  catch(e){const m=String(e&&e.message||"");
+    B.err=m==="taken"?"Ovaj termin je upravo zauzet. Izaberite drugo vreme.":m==="busy"?"Neko upravo zakazuje isti dan. Pokušajte ponovo za par sekundi.":
+      (m==="nowrite"||(e&&e.code==="invalid_argument"))?"Sa ovim nalogom ne možete da zakažete termin. Pišite nam na Instagram @salon_za_sisanje_pasanjuskica.":"Termin nije sačuvan zbog greške u vezi. Pokušajte ponovo.";
+    if(m==="taken"){B.step=2;B.time=null}}
+  if(B){B.busy=false;renderBooking()}
+}
+
+/* =================================================================
+   7. ADMIN PANEL
+   ================================================================= */
+let A=null;
+function openAdmin(){
+  if(Store.mode==="live"&&!Store.isAdmin){toast("Panel je dostupan samo vlasniku salona.");return}
+  opener=document.activeElement;A={tab:"termini",draft:structuredClone(Store.settings),dirty:false,blk:{date:ymd(new Date()),allDay:true,from:"12:00",to:"13:00",note:""},details:{},confirm:null};
+  renderAdmin();
+}
+function renderAdmin(){
+  if(!A) return;const root=$("#modalRoot");document.body.style.overflow="hidden";let body="";
+  if(A.tab==="vreme"){
+    body=`<p style="color:var(--mute);margin-top:0">Kalendar za klijente se menja čim sačuvate.</p>
+    ${[1,2,3,4,5,6,0].map(i=>{const x=A.draft.hours[String(i)];return `<div class="hrow"><span class="dn">${DAYS[i]}</span>
+      <button class="switch" role="switch" aria-checked="${x.on}" aria-label="${DAYS[i]} radni dan" data-tog="${i}"></button>
+      <div class="field"><label for="o${i}">Od</label><input id="o${i}" type="time" step="1800" value="${x.open}" data-o="${i}" ${x.on?"":"disabled"}></div>
+      <div class="field"><label for="c${i}">Do</label><input id="c${i}" type="time" step="1800" value="${x.close}" data-c="${i}" ${x.on?"":"disabled"}></div></div>`}).join("")}
+    <div class="grid2" style="margin-top:18px">
+      <div class="field"><label for="a-step">Razmak između termina</label><select id="a-step">${[15,30,60].map(v=>`<option value="${v}" ${A.draft.slotStep==v?"selected":""}>${v} min</option>`).join("")}</select></div>
+      <div class="field"><label for="a-ahead">Zakazivanje unapred</label><select id="a-ahead">${[14,21,28,42,60].map(v=>`<option value="${v}" ${A.draft.bookAhead==v?"selected":""}>${v} dana</option>`).join("")}</select></div></div>`;
+  } else if(A.tab==="blokade"){
+    const bl=[...(A.draft.blocks||[])].filter(b=>b.date>=ymd(new Date())).sort((a,b)=>(a.date+a.from).localeCompare(b.date+b.from));
+    body=`<div class="grid2">
+      <div class="field"><label for="b-date">Datum</label><input id="b-date" type="date" value="${A.blk.date}" min="${ymd(new Date())}"></div>
+      <div class="field"><label for="b-type">Šta blokirate</label><select id="b-type"><option value="1" ${A.blk.allDay?"selected":""}>Ceo dan (slobodan dan)</option><option value="0" ${A.blk.allDay?"":"selected"}>Deo dana (pauza)</option></select></div>
+      ${A.blk.allDay?"":`<div class="field"><label for="b-from">Od</label><input id="b-from" type="time" step="900" value="${A.blk.from}"></div><div class="field"><label for="b-to">Do</label><input id="b-to" type="time" step="900" value="${A.blk.to}"></div>`}
+      <div class="field" style="grid-column:1/-1"><label for="b-note">Napomena</label><input id="b-note" placeholder="npr. pauza za ručak, godišnji odmor" value="${esc(A.blk.note)}"></div></div>
+    <button class="btn ghost" id="addBlk" style="margin-top:14px">Dodaj blokadu</button>
+    ${bl.length?`<ul class="blist">${bl.map(b=>`<li><span><b>${prettyDate(b.date)} · ${b.allDay?"ceo dan":b.from+"–"+b.to}</b>${b.note?` <span style="color:var(--mute)">· ${esc(b.note)}</span>`:""}</span>
+      <button class="btn ghost mini danger" data-rmblk="${b.id}">Ukloni</button></li>`).join("")}</ul>`:`<div class="empty" style="margin-top:16px">Nema blokiranih dana ni pauza.</div>`}`;
+  } else {
+    const list=[...Store.bookings].sort((a,b)=>(a.date+a.start).localeCompare(b.date+b.start));
+    body=list.length?`<ul class="alist">${list.map(b=>{const t=TREATMENTS.find(x=>x.id===b.svc),s=SIZES.find(x=>x.id===b.size),d=A.details[b.id];
+      const who=d===undefined?`<span style="color:var(--mute)">učitavam…</span>`:d?`${esc(d.dog)} · ${esc(d.owner)}<small>${esc(d.phone)}${d.note?" · "+esc(d.note):""}</small>`:`<span style="color:var(--mute)">podaci nisu dostupni</span>`;
+      return `<li><span class="when">${prettyDate(b.date)} · ${b.start}–${toHM(toMin(b.start)+b.dur)}</span><span class="who">${who}</span>
+        <span class="tagp">${esc(t?t.short:b.svc)} · ${esc(s?s.name:b.size)}</span>
+        ${A.confirm===b.id?`<span class="confirm">Otkazati?<button class="btn mini ghost danger" data-cancel-yes="${b.id}">Da, otkaži</button><button class="btn mini ghost" data-cancel-no>Ne</button></span>`:`<button class="btn ghost mini" data-cancel="${b.id}">Otkaži</button>`}</li>`}).join("")}</ul>`
+      :`<div class="empty">Još nema zakazanih termina. Novi termini se pojavljuju ovde čim ih klijent potvrdi.</div>`;
+    list.forEach(b=>{if(!(b.id in A.details)){A.details[b.id]=undefined;Store.details(b).then(d=>{if(A){A.details[b.id]=d;renderAdmin()}})}});
+  }
+  const scroll=root.querySelector(".modal")?.scrollTop||0,fk=focusKey(),first=!root.firstChild;root.innerHTML="";
+  const ov=h(`<div class="overlay" role="dialog" aria-modal="true" aria-label="Panel za vlasnika"><div class="modal wide">
+    <header><h3>Panel za vlasnika</h3><button class="x" data-close aria-label="Zatvori">✕</button></header>
+    <div class="body">
+      <p style="margin:0 0 14px;color:var(--mute);font-size:14px">${Store.mode==="live"?"Promene se čuvaju za sve posetioce.":"Demo režim: podaci se čuvaju samo u ovom pregledaču."}</p>
+      <div class="tabs" role="tablist">${[["termini",`Termini (${Store.bookings.length})`],["vreme","Radno vreme"],["blokade","Blokade i pauze"]].map(([k,l])=>`<button class="tab" role="tab" aria-selected="${A.tab===k}" data-tab="${k}">${l}</button>`).join("")}</div>
+      ${body}</div>
+    ${A.tab==="termini"?"":`<footer class="mf"><span class="summary">${A.dirty?"Imate nesačuvane promene.":"Sve je sačuvano."}</span>
+      <div style="display:flex;gap:8px">${A.dirty?`<button class="btn ghost" data-reset>Poništi</button>`:""}<button class="btn" data-save ${A.dirty?"":"disabled"}>Sačuvaj</button></div></footer>`}
+    </div></div>`);
+  root.append(ov);ov.querySelector(".modal").scrollTop=scroll;
+  {const t=(fk&&ov.querySelector(fk))||(first&&ov.querySelector(".x"));if(t)t.focus({preventScroll:true})}
+  ov.addEventListener("click",e=>{if(e.target===ov)closeModal()});
+  ov.querySelectorAll("[data-close]").forEach(b=>b.onclick=closeModal);
+  ov.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>{A.tab=b.dataset.tab;renderAdmin()});
+  const dirty=()=>{A.dirty=true;renderAdmin()};
+  ov.querySelectorAll("[data-tog]").forEach(b=>b.onclick=()=>{const x=A.draft.hours[b.dataset.tog];x.on=!x.on;dirty()});
+  ov.querySelectorAll("[data-o]").forEach(i=>i.onchange=()=>{A.draft.hours[i.dataset.o].open=i.value;dirty()});
+  ov.querySelectorAll("[data-c]").forEach(i=>i.onchange=()=>{A.draft.hours[i.dataset.c].close=i.value;dirty()});
+  const st=$("#a-step");if(st) st.onchange=()=>{A.draft.slotStep=+st.value;dirty()};
+  const ah=$("#a-ahead");if(ah) ah.onchange=()=>{A.draft.bookAhead=+ah.value;dirty()};
+  [["b-date","date"],["b-from","from"],["b-to","to"],["b-note","note"]].forEach(([id,k])=>{const i=$("#"+id);if(i)i.oninput=()=>A.blk[k]=i.value});
+  const bt=$("#b-type");if(bt) bt.onchange=()=>{A.blk.allDay=bt.value==="1";renderAdmin()};
+  const ab=$("#addBlk");if(ab) ab.onclick=()=>{
+    if(!A.blk.date){toast("Izaberite datum.");return}
+    if(!A.blk.allDay&&toMin(A.blk.to)<=toMin(A.blk.from)){toast("Kraj pauze mora biti posle početka.");return}
+    A.draft.blocks=[...(A.draft.blocks||[]),{id:rid(),...A.blk}];A.blk.note="";dirty()};
+  ov.querySelectorAll("[data-rmblk]").forEach(b=>b.onclick=()=>{A.draft.blocks=A.draft.blocks.filter(x=>x.id!==b.dataset.rmblk);dirty()});
+  ov.querySelectorAll("[data-cancel]").forEach(b=>b.onclick=()=>{A.confirm=b.dataset.cancel;renderAdmin()});
+  ov.querySelectorAll("[data-cancel-no]").forEach(b=>b.onclick=()=>{A.confirm=null;renderAdmin()});
+  ov.querySelectorAll("[data-cancel-yes]").forEach(b=>b.onclick=async()=>{const bk=Store.bookings.find(x=>x.id===b.dataset.cancelYes);A.confirm=null;
+    try{await Store.cancel(bk);toast("Termin je otkazan.")}catch(e){toast("Otkazivanje nije uspelo. Pokušajte ponovo.")}renderAdmin()});
+  const rs=ov.querySelector("[data-reset]");if(rs) rs.onclick=()=>{A.draft=structuredClone(Store.settings);A.dirty=false;renderAdmin()};
+  const sv=ov.querySelector("[data-save]");if(sv) sv.onclick=async()=>{
+    for(const [k,x] of Object.entries(A.draft.hours)) if(x.on&&toMin(x.close)<=toMin(x.open)){toast(`${DAYS[k]}: kraj radnog vremena mora biti posle početka.`);return}
+    sv.disabled=true;
+    try{await Store.saveSettings(structuredClone(A.draft));A.dirty=false;toast("Sačuvano. Kalendar je ažuriran.")}catch(e){toast("Čuvanje nije uspelo. Proverite da li imate prava urednika.")}
+    renderAdmin()};
+}
+
+/* =================================================================
+   8. BOOT
+   ================================================================= */
+function reveals(){
+  if(reduced||!("IntersectionObserver" in window)) return;
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.remove("pre");io.unobserve(e.target)}}),{rootMargin:"0px 0px -6% 0px"});
+  document.querySelectorAll(".reveal").forEach(el=>{if(el.getBoundingClientRect().top>innerHeight){el.classList.add("pre");io.observe(el)}});
+}
+function boot(){
+  $("#yr").textContent=new Date().getFullYear();
+  setWord(HERO_WORDS[0]);heroBubbles();renderServices();renderHours();heroParallax();reveals();
+  document.addEventListener("click",e=>{const b=e.target.closest("[data-book]");if(b){e.preventDefault();openBooking()}});
+  $("#menuBtn").onclick=openMenu;$("#adminBtn").onclick=openAdmin;
+  $("#prevSlide").onclick=()=>goSlide(-1);$("#nextSlide").onclick=()=>goSlide(1);
+  $("#petMe").onclick=petDog;$("#heroDog").onclick=petDog;
+  document.addEventListener("keydown",e=>{if(e.key!=="Escape")return;const m=$(".menu");if(m){m.remove();document.body.style.overflow="";return}if($("#modalRoot").firstChild)closeModal()});
+  Store.on(()=>{renderHours();if(B&&!B.done&&!B.busy&&B.step===2)renderBooking();if(A)renderAdmin()});
+  Store.init().then(()=>{if(location.hash==="#admin")openAdmin()});
+  window.addEventListener("hashchange",()=>{if(location.hash==="#admin")openAdmin()});
+  setInterval(renderHours,60000);
+  const fab=$("#fab");
+  if("IntersectionObserver" in window) new IntersectionObserver(([e])=>{const on=!e.isIntersecting;fab.classList.toggle("show",on);fab.setAttribute("aria-hidden",String(!on));fab.tabIndex=on?0:-1}).observe($(".hero"));
+}
+boot();
+</script>
+
+</body>
+</html>
