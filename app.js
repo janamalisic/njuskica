@@ -379,7 +379,7 @@ function openAdmin(){
   opener=document.activeElement;A={tab:"termini",draft:structuredClone(Store.settings),dirty:false,blk:{date:ymd(new Date()),allDay:true,from:"12:00",to:"13:00",note:""},details:{},confirm:null};
   renderAdmin();
 }
-function timeOpts(cur){const v=new Set();for(let m=5*60;m<=23*60;m+=30)v.add(toHM(m));v.add(cur);return [...v].sort().map(t=>`<option ${t===cur?"selected":""}>${t}</option>`).join("")}
+function timeOpts(cur,step=30){const v=new Set();for(let m=5*60;m<=23*60;m+=step)v.add(toHM(m));v.add(cur);return [...v].sort().map(t=>`<option ${t===cur?"selected":""}>${t}</option>`).join("")}
 function renderAdmin(){
   if(!A) return;const root=$("#modalRoot");if(!ADMIN_PAGE)document.body.style.overflow="hidden";let body="";
   if(A.tab==="vreme"){
@@ -393,14 +393,21 @@ function renderAdmin(){
       <div class="field"><label for="a-ahead">Zakazivanje unapred</label><select id="a-ahead">${[14,21,28,42,60].map(v=>`<option value="${v}" ${A.draft.bookAhead==v?"selected":""}>${v} dana</option>`).join("")}</select></div></div>`;
   } else if(A.tab==="blokade"){
     const bl=[...(A.draft.blocks||[])].filter(b=>b.date>=ymd(new Date())).sort((a,b)=>(a.date+a.from).localeCompare(b.date+b.from));
-    body=`<div class="grid2">
-      <div class="field"><label for="b-date">Datum</label><input id="b-date" type="date" value="${A.blk.date}" min="${ymd(new Date())}"></div>
-      <div class="field"><label for="b-type">Šta blokirate</label><select id="b-type"><option value="1" ${A.blk.allDay?"selected":""}>Ceo dan (slobodan dan)</option><option value="0" ${A.blk.allDay?"":"selected"}>Deo dana (pauza)</option></select></div>
-      ${A.blk.allDay?"":`<div class="field"><label for="b-from">Od</label><input id="b-from" type="time" step="900" value="${A.blk.from}"></div><div class="field"><label for="b-to">Do</label><input id="b-to" type="time" step="900" value="${A.blk.to}"></div>`}
-      <div class="field" style="grid-column:1/-1"><label for="b-note">Napomena</label><input id="b-note" placeholder="npr. pauza za ručak, godišnji odmor" value="${esc(A.blk.note)}"></div></div>
-    <button class="btn ghost" id="addBlk" style="margin-top:14px">Dodaj blokadu</button>
-    ${bl.length?`<ul class="blist">${bl.map(b=>`<li><span><b>${prettyDate(b.date)} · ${b.allDay?"ceo dan":b.from+"–"+b.to}</b>${b.note?` <span style="color:var(--mute)">· ${esc(b.note)}</span>`:""}</span>
-      <button class="btn ghost mini danger" data-rmblk="${b.id}">Ukloni</button></li>`).join("")}</ul>`:`<div class="empty" style="margin-top:16px">Nema blokiranih dana ni pauza.</div>`}`;
+    body=`<div class="blk-form">
+      <div class="seg" role="radiogroup" aria-label="Vrsta">
+        <button role="radio" aria-checked="${A.blk.allDay}" data-btype="1">Slobodan dan</button>
+        <button role="radio" aria-checked="${!A.blk.allDay}" data-btype="0">Pauza</button>
+      </div>
+      <div class="blk-row">
+        <div class="field blk-date"><label for="b-date">Datum</label><input id="b-date" type="date" value="${A.blk.date}" min="${ymd(new Date())}"></div>
+        ${A.blk.allDay?"":`<div class="field"><label for="b-from">Od</label><select id="b-from">${timeOpts(A.blk.from,15)}</select></div><div class="field"><label for="b-to">Do</label><select id="b-to">${timeOpts(A.blk.to,15)}</select></div>`}
+      </div>
+      <div class="field"><label for="b-note">Napomena (nije obavezno)</label><input id="b-note" placeholder="npr. ručak, godišnji odmor" value="${esc(A.blk.note)}"></div>
+      <button class="btn" id="addBlk">+ Dodaj</button>
+    </div>
+    <p class="steplbl" style="margin:22px 0 0">Zakazane pauze i slobodni dani</p>
+    ${bl.length?`<ul class="blist">${bl.map(b=>`<li><span class="bl-tx"><b>${prettyDate(b.date)} · ${b.allDay?"ceo dan":b.from+"–"+b.to}</b>${b.note?`<small>${esc(b.note)}</small>`:""}</span>
+      <button class="x-mini" data-rmblk="${b.id}" aria-label="Ukloni ${prettyDate(b.date)}">✕</button></li>`).join("")}</ul>`:`<div class="empty" style="margin-top:12px">Nema pauza ni slobodnih dana.</div>`}`;
   } else {
     const list=[...Store.bookings].sort((a,b)=>(a.date+a.start).localeCompare(b.date+b.start));
     body=list.length?`<ul class="alist">${list.map(b=>{const t=TREATMENTS.find(x=>x.id===b.svc),s=SIZES.find(x=>x.id===b.size),d=A.details[b.id];
@@ -434,7 +441,7 @@ function renderAdmin(){
   const st=$("#a-step");if(st) st.onchange=()=>{A.draft.slotStep=+st.value;dirty()};
   const ah=$("#a-ahead");if(ah) ah.onchange=()=>{A.draft.bookAhead=+ah.value;dirty()};
   [["b-date","date"],["b-from","from"],["b-to","to"],["b-note","note"]].forEach(([id,k])=>{const i=$("#"+id);if(i)i.oninput=()=>A.blk[k]=i.value});
-  const bt=$("#b-type");if(bt) bt.onchange=()=>{A.blk.allDay=bt.value==="1";renderAdmin()};
+  ov.querySelectorAll("[data-btype]").forEach(b=>b.onclick=()=>{A.blk.allDay=b.dataset.btype==="1";renderAdmin()});
   const ab=$("#addBlk");if(ab) ab.onclick=()=>{
     if(!A.blk.date){toast("Izaberite datum.");return}
     if(!A.blk.allDay&&toMin(A.blk.to)<=toMin(A.blk.from)){toast("Kraj pauze mora biti posle početka.");return}
