@@ -38,7 +38,7 @@ Sliku menjate tako što otpremite novu sa istim imenom (PNG sa providnom pozadin
 
 Otvara se na `admin.html` (link iznad). Na sajtu za klijente nema linka ka njemu. Stranica traži PIN; posle pet pogrešnih pokušaja čeka se minut. Tu se podešavaju radno vreme po danima, razmak između termina, koliko dana unapred se zakazuje, slobodni dani i pauze, i vide se zakazani termini.
 
-**Početni PIN je poslat vlasniku privatno. Promenite ga odmah:** na stranici za vlasnika kliknite „Promena PIN-a", upišite novi PIN i „Izračunaj", pa dobijenu liniju zalepite u `app.js` umesto linije koja počinje sa `const OWNER_PIN_HASH`. PIN se nigde ne čuva, samo njegov otisak (SHA-256).
+PIN je za sada demo PIN i menja se u `app.js` (linija `const OWNER_PIN_HASH`). PIN se nigde ne čuva u kodu, samo njegov otisak (SHA-256).
 
 Ograničenje: ovo je brava na vratima, ne sef. Pošto sajt nema server, neko ko zna da čita kod može da zaobiđe PIN u svom pregledaču, ali u demo režimu time vidi samo svoje lokalne podatke. Kad se doda baza (Supabase), prijava vlasnika mora da ide kroz bazu (Supabase Auth), i tada je zaštita prava.
 

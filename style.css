@@ -375,7 +375,6 @@ footer .fine{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 .gate p{margin:0;color:var(--mute);font-size:15px}
 .gate .btn{align-self:flex-start}
 .gate .hint a{color:var(--mute)}
-.pinout{margin:10px 0 0;padding:12px 14px;border-radius:14px;background:var(--mist);font-size:12px;white-space:pre-wrap;overflow-wrap:anywhere;user-select:all}
 .admin-page .overlay{position:static;background:none;backdrop-filter:none;-webkit-backdrop-filter:none;padding:0;animation:none;display:block}
 .admin-page .modal,.admin-page .modal.wide{width:100%;max-height:none;overflow:visible;animation:none;border-radius:28px}
 .admin-page .modal header{position:static;border-radius:28px 28px 0 0}

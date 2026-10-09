@@ -464,8 +464,7 @@ function reveals(){
 /* =================================================================
    9. OWNER PAGE (admin.html) — PIN gate
    The PIN is never stored: only its SHA-256 hash is compared.
-   To change the PIN, open admin.html → "Promena PIN-a", then paste
-   the printed line over the one below.
+   To change the PIN, replace the hash below with sha256 of the new PIN.
    ================================================================= */
 const OWNER_PIN_HASH="7451c3c994e9ee0aefd08ae8a70b5067ee50e5ecdf0636ccbb8a8366ae49fc94";
 const OWNER_KEY="njuskica-owner",OWNER_LOCK="njuskica-owner-lock";
@@ -482,8 +481,7 @@ function renderGate(msg){
     ${msg?`<p class="err" role="alert">${esc(msg)}</p>`:""}
     ${until?`<p class="err" role="alert">Previše pogrešnih pokušaja. Pokušajte ponovo za ${Math.ceil((until-Date.now())/1000)} s.</p>`:""}
     <button class="btn" type="submit" ${until?"disabled":""}>Uđi →</button>
-    <p class="hint"><a href="index.html">← Nazad na sajt</a> · <button type="button" class="linkbtn" id="pinHelp">Promena PIN-a</button></p>
-    <div id="pinTool" hidden></div>
+    <p class="hint"><a href="index.html">← Nazad na sajt</a></p>
   </form>`;
   if(until) setTimeout(()=>renderGate(),until-Date.now()+50);
   $("#gateForm").onsubmit=async e=>{e.preventDefault();const v=$("#pin").value.trim();if(!v)return;
@@ -492,10 +490,6 @@ function renderGate(msg){
     const n=(lock&&lock.until>Date.now()-600000?lock.n:0)+1;
     try{localStorage.setItem(OWNER_LOCK,JSON.stringify({n,until:n>=5?Date.now()+60000:0}))}catch(err){}
     renderGate("Pogrešan PIN.")};
-  $("#pinHelp").onclick=()=>{const t=$("#pinTool");t.hidden=!t.hidden;if(!t.hidden){t.innerHTML=`<div class="field"><label for="newPin">Novi PIN</label><input id="newPin" inputmode="numeric"></div>
-      <button type="button" class="btn ghost mini" id="mkPin">Izračunaj</button><pre id="pinOut" class="pinout" hidden></pre>
-      <p class="hint">Liniju ispod zalepite u fajl <b>app.js</b> umesto postojeće linije koja počinje sa <b>const OWNER_PIN_HASH</b>, pa sačuvajte fajl na GitHub-u.</p>`;
-    $("#mkPin").onclick=async()=>{const v=$("#newPin").value.trim();if(v.length<4){toast("PIN neka ima bar 4 znaka.");return}const o=$("#pinOut");o.hidden=false;o.textContent=`const OWNER_PIN_HASH="${await sha256(v)}";`}}};
   $("#pin")?.focus();
 }
 function ownerEnter(){$("#gate").hidden=true;openAdmin()}
