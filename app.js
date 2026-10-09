@@ -379,14 +379,15 @@ function openAdmin(){
   opener=document.activeElement;A={tab:"termini",draft:structuredClone(Store.settings),dirty:false,blk:{date:ymd(new Date()),allDay:true,from:"12:00",to:"13:00",note:""},details:{},confirm:null};
   renderAdmin();
 }
+function timeOpts(cur){const v=new Set();for(let m=5*60;m<=23*60;m+=30)v.add(toHM(m));v.add(cur);return [...v].sort().map(t=>`<option ${t===cur?"selected":""}>${t}</option>`).join("")}
 function renderAdmin(){
   if(!A) return;const root=$("#modalRoot");if(!ADMIN_PAGE)document.body.style.overflow="hidden";let body="";
   if(A.tab==="vreme"){
-    body=`<p style="color:var(--mute);margin-top:0">Kalendar za klijente se menja čim sačuvate.</p>
+    body=`<p class="ahint">Kalendar za klijente se menja čim sačuvate.</p>
     ${[1,2,3,4,5,6,0].map(i=>{const x=A.draft.hours[String(i)];return `<div class="hrow"><span class="dn">${DAYS[i]}</span>
       <button class="switch" role="switch" aria-checked="${x.on}" aria-label="${DAYS[i]} radni dan" data-tog="${i}"></button>
-      <div class="field"><label for="o${i}">Od</label><input id="o${i}" type="time" step="1800" value="${x.open}" data-o="${i}" ${x.on?"":"disabled"}></div>
-      <div class="field"><label for="c${i}">Do</label><input id="c${i}" type="time" step="1800" value="${x.close}" data-c="${i}" ${x.on?"":"disabled"}></div></div>`}).join("")}
+      <div class="field"><label for="o${i}">Od</label><select id="o${i}" data-o="${i}" ${x.on?"":"disabled"}>${timeOpts(x.open)}</select></div>
+      <div class="field"><label for="c${i}">Do</label><select id="c${i}" data-c="${i}" ${x.on?"":"disabled"}>${timeOpts(x.close)}</select></div></div>`}).join("")}
     <div class="grid2" style="margin-top:18px">
       <div class="field"><label for="a-step">Razmak između termina</label><select id="a-step">${[15,30,60].map(v=>`<option value="${v}" ${A.draft.slotStep==v?"selected":""}>${v} min</option>`).join("")}</select></div>
       <div class="field"><label for="a-ahead">Zakazivanje unapred</label><select id="a-ahead">${[14,21,28,42,60].map(v=>`<option value="${v}" ${A.draft.bookAhead==v?"selected":""}>${v} dana</option>`).join("")}</select></div></div>`;
@@ -406,8 +407,8 @@ function renderAdmin(){
       const who=d===undefined?`<span style="color:var(--mute)">učitavam…</span>`:d?`${esc(d.dog)} · ${esc(d.owner)}<small>${esc(d.phone)}${d.note?" · "+esc(d.note):""}</small>`:`<span style="color:var(--mute)">podaci nisu dostupni</span>`;
       return `<li><span class="when">${prettyDate(b.date)} · ${b.start}–${toHM(toMin(b.start)+b.dur)}</span><span class="who">${who}</span>
         <span class="tagp">${esc(t?t.short:b.svc)} · ${esc(s?s.name:b.size)}</span>
-        ${d?`<span class="acts"><button class="btn ghost mini" data-msg="${b.id}">Kopiraj poruku</button><a class="btn ghost mini" href="sms:${smsNum(d.phone)}?&body=${encodeURIComponent(ownerMsg(b,d))}">SMS</a></span>`:""}
-        ${A.confirm===b.id?`<span class="confirm">Otkazati?<button class="btn mini ghost danger" data-cancel-yes="${b.id}">Da, otkaži</button><button class="btn mini ghost" data-cancel-no>Ne</button></span>`:`<button class="btn ghost mini" data-cancel="${b.id}">Otkaži</button>`}</li>`}).join("")}</ul>`
+        ${A.confirm===b.id?`<span class="acts confirm">Otkazati?<button class="btn mini ghost danger" data-cancel-yes="${b.id}">Da, otkaži</button><button class="btn mini ghost" data-cancel-no>Ne</button></span>`
+          :`<span class="acts">${d?`<button class="btn ghost mini" data-msg="${b.id}">Kopiraj poruku</button><a class="btn ghost mini" href="sms:${smsNum(d.phone)}?&body=${encodeURIComponent(ownerMsg(b,d))}">SMS</a>`:""}<button class="btn ghost mini danger" data-cancel="${b.id}">Otkaži</button></span>`}</li>`}).join("")}</ul>`
       :`<div class="empty">Još nema zakazanih termina. Novi termini se pojavljuju ovde čim ih klijent potvrdi.</div>`;
     list.forEach(b=>{if(!(b.id in A.details)){A.details[b.id]=undefined;Store.details(b).then(d=>{if(A){A.details[b.id]=d;renderAdmin()}})}});
   }
@@ -415,8 +416,8 @@ function renderAdmin(){
   const ov=h(`<div class="overlay" role="dialog" aria-modal="true" aria-label="Panel za vlasnika"><div class="modal wide">
     <header><h3>Panel za vlasnika</h3>${ADMIN_PAGE?`<button class="btn mini light" data-close>Odjavi se</button>`:`<button class="x" data-close aria-label="Zatvori">✕</button>`}</header>
     <div class="body">
-      <p style="margin:0 0 14px;color:var(--mute);font-size:14px">${Store.mode==="live"?"Promene se čuvaju za sve posetioce.":"Demo režim: podaci se čuvaju samo u ovom pregledaču."}</p>
-      <div class="tabs" role="tablist">${[["termini",`Termini (${Store.bookings.length})`],["vreme","Radno vreme"],["blokade","Blokade i pauze"]].map(([k,l])=>`<button class="tab" role="tab" aria-selected="${A.tab===k}" data-tab="${k}">${l}</button>`).join("")}</div>
+      <p class="ahint">${Store.mode==="live"?"Promene se čuvaju za sve posetioce.":"Demo: podaci su samo u ovom pregledaču."}</p>
+      <div class="tabs" role="tablist">${[["termini",`Termini (${Store.bookings.length})`],["vreme","Radno vreme"],["blokade","Pauze"]].map(([k,l])=>`<button class="tab" role="tab" aria-selected="${A.tab===k}" data-tab="${k}">${l}</button>`).join("")}</div>
       ${body}</div>
     ${A.tab==="termini"?"":`<footer class="mf"><span class="summary">${A.dirty?"Imate nesačuvane promene.":"Sve je sačuvano."}</span>
       <div style="display:flex;gap:8px">${A.dirty?`<button class="btn ghost" data-reset>Poništi</button>`:""}<button class="btn" data-save ${A.dirty?"":"disabled"}>Sačuvaj</button></div></footer>`}

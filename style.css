@@ -134,7 +134,7 @@ h1,h2,h3{margin:0;font-weight:400}
 .mybook span{font-size:15px;color:var(--mute);flex:1;min-width:160px}
 .done .acts{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:18px}
 a.btn{text-decoration:none}
-.alist .acts{display:flex;gap:6px;flex-wrap:wrap}
+.alist .acts{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
 @media (max-width:1000px){.svc-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:760px){
   .orbit,.svc-pop{display:none}
@@ -299,7 +299,8 @@ footer .fine{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
 .tab{padding:10px 18px;border-radius:999px;background:var(--mist);font-weight:700;font-size:14px}
 .tab[aria-selected="true"]{background:var(--ink);color:#fff}
-.hrow{display:grid;grid-template-columns:130px auto 1fr 1fr;gap:14px;align-items:center;padding-block:10px;border-bottom:1.5px solid #f0eae7}
+.hrow{display:grid;grid-template-columns:150px auto 150px 150px;justify-content:start;gap:14px 20px;align-items:end;padding-block:10px;border-bottom:1.5px solid #f0eae7}
+.hrow .dn,.hrow .switch{align-self:center}
 .hrow .dn{font-weight:700;color:var(--ink)}
 @media (max-width:600px){.hrow{grid-template-columns:1fr auto}}
 .switch{position:relative;width:50px;height:28px;border-radius:999px;background:#e3dcd9;flex:none;transition:background .2s}
@@ -335,7 +336,7 @@ footer .fine{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
   .svc-item .sketch{display:none}
   .svc-item .go{display:grid;grid-column:2;grid-row:1/4;align-self:center;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--rose-ink);place-items:center;color:var(--rose-ink);font-size:18px}
   /* fewer "Zakaži" on phones: nav pill, clouds and the floating button are enough */
-  .statement .sketch,.loc-card .sketch,.pic{display:none}
+  .statement .sketch,.loc-card .sketch{display:none}
   .loc-card{min-height:380px;border-radius:28px}
   .loc-card .ig{font-size:14px;padding:11px 14px;gap:8px}
   .loc-card .mini-dog{height:38%;right:-18px}
@@ -380,6 +381,37 @@ footer .fine{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 .admin-page .modal header{position:static;border-radius:28px 28px 0 0}
 .admin-page .modal footer.mf{border-radius:0 0 28px 28px}
 .admin-page .toast{bottom:auto;top:calc(16px + env(safe-area-inset-top,0px))}
+.ahint{margin:0 0 14px;color:var(--mute);font-size:14px}
+.hrow select{padding:11px 12px;font-variant-numeric:tabular-nums}
+/* owner panel on phones: full width, compact rows, one-line actions */
+@media (max-width:600px){
+  .admin-page .admin-wrap{padding:calc(12px + env(safe-area-inset-top,0px)) 10px calc(16px + env(safe-area-inset-bottom,0px))}
+  .admin-page .logo{margin:0 0 12px 6px;font-size:26px}
+  .admin-page .modal,.admin-page .modal.wide{border-radius:24px}
+  .admin-page .modal header{border-radius:24px 24px 0 0;padding:14px 16px}
+  .admin-page .modal header h3{font-size:22px}
+  .admin-page .modal .body{padding:16px 14px}
+  .admin-page .modal footer.mf{position:sticky;bottom:0;border-radius:0 0 24px 24px;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));flex-wrap:nowrap}
+  .admin-page .mf .summary{width:auto;flex:1;font-size:13px}
+  .admin-page .mf>div:last-child{width:auto}
+  .admin-page .mf .btn{flex:none;padding:12px 20px}
+  .tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-bottom:16px}
+  .tab{padding:10px 4px;font-size:13px;text-align:center;white-space:nowrap}
+  .hrow{grid-template-columns:minmax(0,1fr) auto auto auto;gap:6px;padding-block:8px;align-items:center}
+  .hrow .dn{font-size:15px;order:0}
+  .hrow .switch{order:3}
+  .hrow .field{order:1}
+  .hrow .field label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .hrow select{padding:9px 8px;border-radius:12px;font-size:15px;width:78px}
+  .alist li,.blist li{display:grid;grid-template-columns:1fr;gap:6px;padding:12px 14px;border-radius:16px}
+  .alist .when{min-width:0;font-size:16px}
+  .alist .who{min-width:0}
+  .alist .tagp{justify-self:start}
+  .alist .acts{flex-wrap:nowrap;gap:6px;margin-top:4px}
+  .alist .acts .btn{flex:1;justify-content:center;padding:10px 6px;font-size:11px;letter-spacing:.02em}
+  .alist .acts.confirm{font-size:13px}
+  .blist li .btn{justify-self:start}
+}
 
 .reveal{transition:transform 1s cubic-bezier(.2,.8,.2,1),opacity 1s}
 .reveal.pre{transform:translateY(40px);opacity:.2}
